@@ -88,23 +88,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   transform: translateY(6px);
   box-shadow: 0 0px 0 rgba(212, 175, 55, 0.3), 0 2px 5px rgba(0,0,0,0.2);
 }
-.btn-ghost {
-  background: rgba(255, 255, 255, 0.05); color: var(--cream);
-  border: 1.5px solid rgba(212, 175, 55, 0.4);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 0 rgba(212, 175, 55, 0.1), 0 8px 20px rgba(0,0,0,0.2);
-}
-.btn-ghost:hover {
-  background: rgba(212, 175, 55, 0.15);
-  border-color: var(--gold);
-  transform: translateY(-4px);
-  box-shadow: 0 8px 0 rgba(212, 175, 55, 0.2), 0 15px 30px rgba(0,0,0,0.3);
-}
 
 /* NAVIGATION */
 .nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-  padding: 18px 0; transition: var(--transition); background: rgba(13, 11, 18, 0.9);
+  padding: 18px 0; transition: var(--transition); background: rgba(13, 11, 18, 0.95);
   backdrop-filter: blur(15px); border-bottom: 1px solid rgba(212, 175, 55, 0.15);
 }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
@@ -142,13 +130,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 /* HERO SECTION */
 .hero {
-  min-height: calc(100vh - 90px);
+  min-height: 100dvh; /* Dynamic viewport height for mobile */
   position: relative; display: flex; align-items: center; justify-content: center;
   overflow: hidden; padding: 120px 0 80px;
   /* Lighter gradient overlay so Sylvia and kids are clearly visible */
-  background: linear-gradient(180deg, rgba(13, 11, 18, 0.3) 0%, rgba(27, 11, 46, 0.5) 100%),
-              url('https://i.ibb.co/rKg6RWrT/IMG-9085.jpg') no-repeat center center / cover;
-  background-position: center 20%; /* Optimized to show subjects well */
+  background: linear-gradient(180deg, rgba(13, 11, 18, 0.2) 0%, rgba(27, 11, 46, 0.4) 100%),
+              url('https://i.ibb.co/rKg6RWrT/IMG-9085.jpg') no-repeat center center;
+  background-size: cover;
+  background-position: center 15%; /* Optimized to show subjects perfectly */
 }
 .particles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 1; }
 .particle {
@@ -443,7 +432,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .footer::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 200px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
 .footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 50px; margin-bottom: 60px; }
 .footer-brand { display: flex; flex-direction: column; gap: 18px; }
-.footer-brand .nav-brand { font-size: 1rem; }
 .footer-brand p { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; max-width: 320px; }
 .footer-social { display: flex; gap: 12px; margin-top: 10px; }
 .footer-social a {
@@ -467,6 +455,18 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .footer-bottom p.copyright { font-size: 0.85rem; color: var(--text-muted); letter-spacing: 0.05em; }
 .footer-bottom p.powered { font-size: 0.75rem; color: var(--gold); letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600; }
+
+/* FLOATING SHARE BUTTON */
+.share-float {
+  position: fixed; bottom: 100px; right: 25px; width: 60px; height: 60px;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--fire-orange) 100%);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4), 0 0 0 0 rgba(212, 175, 55, 0.6);
+  z-index: 9998; transition: var(--transition); animation: whatsappPulseBrand 2.5s infinite;
+  cursor: pointer; border: none;
+}
+.share-float:hover { transform: scale(1.1); }
+.share-float svg { width: 28px; height: 28px; fill: var(--deep-purple); }
 
 /* FLOATING WHATSAPP BUTTON - BRAND COLOR */
 .whatsapp-float {
@@ -519,7 +519,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .modal .modal-body { color: var(--text-light); line-height: 1.85; font-size: 1rem; }
 .modal .modal-body p { margin-bottom: 16px; }
 
-/* RESPONSIVE - NO SHAKING */
+/* RESPONSIVE - PROFESSIONAL MOBILE FIXES */
 @media (max-width: 1024px) {
   .welcome-inner, .about-inner, .prayer-inner, .contact-inner { grid-template-columns: 1fr; gap: 50px; }
   .ministry-grid, .teachings-grid, .testimonies-grid { grid-template-columns: repeat(2, 1fr); }
@@ -527,6 +527,15 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 @media (max-width: 768px) {
   .section { padding: 80px 0; }
+  
+  /* Hero background perfectly fitted for mobile */
+  .hero {
+    background-position: center center;
+    background-size: cover;
+    min-height: 100dvh;
+    padding-top: 90px;
+  }
+  
   .nav-links {
     position: fixed; top: 0; right: -100%; width: 80%; max-width: 340px; height: 100vh;
     background: linear-gradient(180deg, var(--deep-purple) 0%, var(--dark) 100%);
@@ -536,16 +545,28 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   }
   .nav-links.active { right: 0; }
   .nav-toggle { display: flex; }
+  
   .ministry-grid, .teachings-grid, .testimonies-grid, .social-grid, .footer-top { grid-template-columns: 1fr; }
   .hero-buttons { flex-direction: column; align-items: stretch; }
   .hero-buttons .btn { justify-content: center; }
   .word-card { padding: 50px 28px; }
-  .prayer-form-wrap { padding: 40px 26px; }
-  .about-image-frame { animation: none; transform: none; } /* Disable complex animation on mobile for performance */
+  
+  /* Prayer form perfectly visible on mobile */
+  .prayer-inner { gap: 40px; }
+  .prayer-form-wrap { padding: 30px 20px; width: 100%; }
+  .form-group input, .form-group textarea { font-size: 16px; } /* Prevents iOS auto-zoom */
+  .btn { width: 100%; justify-content: center; }
+  
+  .about-image-frame { animation: none; transform: none; }
   .about-image-frame:hover { transform: scale(1.02); }
   .footer-bottom { flex-direction: column; text-align: center; }
+  
   .whatsapp-float { width: 54px; height: 54px; bottom: 20px; right: 20px; }
   .whatsapp-float svg { width: 26px; height: 26px; }
+  
+  .share-float { width: 54px; height: 54px; bottom: 90px; right: 20px; }
+  .share-float svg { width: 24px; height: 24px; }
+  
   .modal { padding: 40px 26px; }
 }
 @media (max-width: 480px) {
@@ -594,10 +615,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         <div class="hero-buttons">
           <button class="btn btn-primary" onclick="showSection('ministry')">Enter the Ministry</button>
           <button class="btn btn-outline" onclick="showSection('prayer')">Submit a Prayer Request</button>
-          <button class="btn btn-ghost" onclick="shareWebsite()">
-            Share Ministry
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-          </button>
         </div>
       </div>
     </div>
@@ -753,7 +770,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
             <input type="checkbox" id="prayerPrivate" name="private">
             <span>Keep my request private (only Prophetess Sylvia will see it)</span>
           </label>
-          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+          <button type="submit" class="btn btn-primary">
             Send Prayer Request via WhatsApp
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
           </button>
@@ -958,9 +975,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   <div class="container">
     <div class="footer-top">
       <div class="footer-brand">
-        <a href="#" class="nav-brand" onclick="showSection('home'); return false;">
-          <img src="https://i.ibb.co/yFmmwcLH/1784188041.png" alt="Elohim's Holy Fire Logo" style="height: 40px;">
-        </a>
+        <!-- Logo removed from above the tagline as requested -->
         <p>Carrying the Fire. Proclaiming the Word. Awakening Lives.</p>
         <div class="footer-social">
           <a href="https://www.tiktok.com/@prophetesssylvia" target="_blank" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005.8 20.1a6.34 6.34 0 0010.86-4.43V8.45a8.16 8.16 0 004.77 1.52V6.53a4.85 4.85 0 01-1.84.16z"/></svg></a>
@@ -987,13 +1002,18 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       </div>
     </div>
     
-    <!-- Centered Footer Bottom as requested -->
+    <!-- Centered Footer Bottom -->
     <div class="footer-bottom">
       <p class="copyright">© 2026 Elohim's Holy Fire Revival Ministry</p>
       <p class="powered">Powered by KS1 Empire Global Foundation (KS1EGF)</p>
     </div>
   </div>
 </footer>
+
+<!-- SHARE FLOAT BUTTON (Above WhatsApp) -->
+<button class="share-float" onclick="shareWebsite()" aria-label="Share Ministry">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+</button>
 
 <!-- FLOATING WHATSAPP BUTTON -->
 <a href="https://wa.me/233248283692" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
@@ -1030,7 +1050,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
           <label for="testimonyText">Your Testimony</label>
           <textarea id="testimonyText" name="testimony" required placeholder="Share what God has done..." style="min-height: 150px;"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+        <button type="submit" class="btn btn-primary">
           Send Testimony via WhatsApp
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
         </button>
