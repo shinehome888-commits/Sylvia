@@ -26,7 +26,7 @@
   --charcoal: #1A1420;
   --text-light: #F5EFD9;
   --text-muted: #B8A9C9;
-  --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -62,41 +62,43 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .btn-primary {
   background: linear-gradient(135deg, var(--gold) 0%, var(--fire-orange) 100%);
   color: var(--deep-purple);
-  box-shadow: 0 5px 0 var(--gold-dark), 0 10px 25px rgba(212, 175, 55, 0.35);
+  box-shadow: 0 6px 0 var(--gold-dark), 0 12px 25px rgba(212, 175, 55, 0.35);
   transform: translateY(0);
 }
 .btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 0 var(--gold-dark), 0 15px 35px rgba(212, 175, 55, 0.45);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 0 var(--gold-dark), 0 18px 35px rgba(212, 175, 55, 0.45);
 }
 .btn-primary:active {
-  transform: translateY(5px);
+  transform: translateY(6px);
   box-shadow: 0 0px 0 var(--gold-dark), 0 2px 5px rgba(212, 175, 55, 0.3);
 }
 .btn-outline {
   background: transparent; color: var(--cream);
   border: 2px solid var(--gold);
-  box-shadow: 0 5px 0 rgba(212, 175, 55, 0.3), 0 10px 25px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 0 rgba(212, 175, 55, 0.3), 0 12px 25px rgba(0,0,0,0.2);
   transform: translateY(0);
 }
 .btn-outline:hover {
   background: var(--gold); color: var(--deep-purple);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 0 rgba(184, 150, 46, 0.5), 0 15px 35px rgba(0,0,0,0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 0 rgba(184, 150, 46, 0.5), 0 18px 35px rgba(0,0,0,0.3);
 }
 .btn-outline:active {
-  transform: translateY(5px);
+  transform: translateY(6px);
   box-shadow: 0 0px 0 rgba(212, 175, 55, 0.3), 0 2px 5px rgba(0,0,0,0.2);
 }
 .btn-ghost {
   background: rgba(255, 255, 255, 0.05); color: var(--cream);
   border: 1.5px solid rgba(212, 175, 55, 0.4);
   backdrop-filter: blur(10px);
+  box-shadow: 0 4px 0 rgba(212, 175, 55, 0.1), 0 8px 20px rgba(0,0,0,0.2);
 }
 .btn-ghost:hover {
   background: rgba(212, 175, 55, 0.15);
   border-color: var(--gold);
-  transform: translateY(-3px);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 0 rgba(212, 175, 55, 0.2), 0 15px 30px rgba(0,0,0,0.3);
 }
 
 /* NAVIGATION */
@@ -143,8 +145,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   min-height: calc(100vh - 90px);
   position: relative; display: flex; align-items: center; justify-content: center;
   overflow: hidden; padding: 120px 0 80px;
-  background: linear-gradient(180deg, rgba(13, 11, 18, 0.75) 0%, rgba(27, 11, 46, 0.9) 100%),
+  /* Lighter gradient overlay so Sylvia and kids are clearly visible */
+  background: linear-gradient(180deg, rgba(13, 11, 18, 0.3) 0%, rgba(27, 11, 46, 0.5) 100%),
               url('https://i.ibb.co/rKg6RWrT/IMG-9085.jpg') no-repeat center center / cover;
+  background-position: center 20%; /* Optimized to show subjects well */
 }
 .particles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 1; }
 .particle {
@@ -158,19 +162,29 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   100% { transform: translateY(-10vh) translateX(40px); opacity: 0; }
 }
 .hero-inner {
-  position: relative; z-index: 2; display: grid; grid-template-columns: 1.1fr 0.9fr;
-  gap: 60px; align-items: center; width: 100%;
+  position: relative; z-index: 2; display: flex; flex-direction: column;
+  align-items: center; text-align: center; width: 100%; max-width: 900px;
 }
-.hero-text { animation: fadeUp 1.2s ease-out; }
+
+/* Moving text animation for home screen */
+@keyframes gentleFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.hero-text { 
+  animation: fadeUp 1.2s ease-out, gentleFloat 6s ease-in-out infinite 1.2s; 
+}
 @keyframes fadeUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+
 .hero-welcome {
   font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.1rem;
   color: var(--gold); letter-spacing: 0.25em; margin-bottom: 20px;
   display: inline-flex; align-items: center; gap: 14px;
 }
-.hero-welcome::before { content: ''; width: 40px; height: 1px; background: var(--gold); }
+.hero-welcome::before, .hero-welcome::after { content: ''; width: 40px; height: 1px; background: var(--gold); }
 .hero-title {
-  font-size: clamp(2.2rem, 5.5vw, 4.2rem); font-weight: 700; line-height: 1.05;
+  font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 700; line-height: 1.05;
   margin-bottom: 26px; color: var(--cream); letter-spacing: 0.01em;
 }
 .hero-title .fire-text {
@@ -178,42 +192,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
   filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.3));
 }
-.hero-tagline { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-style: italic; color: var(--gold-light); margin-bottom: 22px; }
-.hero-description { font-size: 1.02rem; color: var(--text-muted); max-width: 540px; margin-bottom: 40px; line-height: 1.8; }
-.hero-buttons { display: flex; flex-wrap: wrap; gap: 16px; }
-
-.hero-image-wrap { position: relative; display: flex; justify-content: center; align-items: center; animation: fadeUp 1.4s ease-out 0.2s backwards; }
-.hero-image-frame {
-  position: relative; width: 100%; max-width: 420px; aspect-ratio: 1 / 1;
-  border-radius: 30px; overflow: hidden;
-  background: rgba(27, 11, 46, 0.5); backdrop-filter: blur(10px);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5), 0 0 60px rgba(212, 175, 55, 0.25), inset 0 0 60px rgba(0, 0, 0, 0.4);
-  border: 2px solid rgba(212, 175, 55, 0.4);
-  transform: perspective(1000px) rotateY(-5deg);
-  transition: var(--transition);
-}
-.hero-image-frame:hover { transform: perspective(1000px) rotateY(0deg) scale(1.02); }
-.hero-image-frame img { width: 100%; height: 100%; object-fit: contain; padding: 30px; }
-
-/* KS1 TRADEMARK WATERMARK - Fixed at bottom */
-.ks1-trademark {
-  position: fixed;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 0.7rem;
-  letter-spacing: 0.25em;
-  color: rgba(212, 175, 55, 0.6);
-  z-index: 9999;
-  pointer-events: none;
-  text-transform: uppercase;
-  font-weight: 600;
-  text-align: center;
-  width: 100%;
-  padding: 0 20px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.9);
-  white-space: nowrap;
-}
+.hero-tagline { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-style: italic; color: var(--gold-light); margin-bottom: 22px; }
+.hero-description { font-size: 1.05rem; color: var(--text-light); max-width: 650px; margin-bottom: 40px; line-height: 1.8; }
+.hero-buttons { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
 
 /* UTILITY & SECTIONS */
 .section { padding: 100px 0; position: relative; }
@@ -245,9 +226,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   box-shadow: 0 10px 30px rgba(0,0,0,0.3), 0 1px 0 rgba(255,255,255,0.05) inset;
 }
 .card-3d:hover {
-  transform: translateY(-8px) scale(1.01);
+  transform: perspective(1000px) rotateX(2deg) translateY(-8px) scale(1.01);
   border-color: rgba(212, 175, 55, 0.5);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(212, 175, 55, 0.1), 0 1px 0 rgba(255,255,255,0.1) inset;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(212, 175, 55, 0.15), 0 1px 0 rgba(255,255,255,0.1) inset;
 }
 
 /* WELCOME */
@@ -272,15 +253,25 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* ABOUT */
 .about { background: radial-gradient(ellipse at 80% 20%, rgba(107, 45, 140, 0.15) 0%, transparent 50%), linear-gradient(180deg, var(--charcoal) 0%, var(--dark) 100%); }
 .about-inner { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 80px; align-items: center; }
+
+/* Moving picture from right to left with 3D effect */
+@keyframes panRightToLeft {
+  0% { transform: perspective(1000px) rotateY(8deg) translateX(30px); }
+  50% { transform: perspective(1000px) rotateY(-8deg) translateX(-30px); }
+  100% { transform: perspective(1000px) rotateY(8deg) translateX(30px); }
+}
+
 .about-image-frame {
   position: relative; aspect-ratio: 4 / 5; border-radius: 20px; overflow: hidden;
   background: linear-gradient(135deg, var(--purple) 0%, var(--deep-purple) 100%);
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(212, 175, 55, 0.15);
   border: 2px solid rgba(212, 175, 55, 0.3);
-  transform: perspective(1000px) rotateY(5deg);
-  transition: var(--transition);
+  animation: panRightToLeft 10s ease-in-out infinite;
 }
-.about-image-frame:hover { transform: perspective(1000px) rotateY(0deg) scale(1.02); }
+.about-image-frame:hover { 
+  animation-play-state: paused; 
+  transform: perspective(1000px) rotateY(0deg) scale(1.05); 
+}
 .about-image-frame img { width: 100%; height: 100%; object-fit: cover; }
 .about-content p { color: var(--text-light); margin-bottom: 18px; line-height: 1.85; }
 .about-intro { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-style: italic; color: var(--gold-light); line-height: 1.7; margin-bottom: 24px; }
@@ -448,7 +439,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .contact-cta p { color: var(--text-muted); margin-bottom: 26px; font-style: italic; font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; }
 
 /* FOOTER */
-.footer { background: linear-gradient(180deg, var(--dark) 0%, #050308 100%); padding: 80px 0 60px; border-top: 1px solid rgba(212, 175, 55, 0.15); position: relative; }
+.footer { background: linear-gradient(180deg, var(--dark) 0%, #050308 100%); padding: 80px 0 40px; border-top: 1px solid rgba(212, 175, 55, 0.15); position: relative; }
 .footer::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 200px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
 .footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 50px; margin-bottom: 60px; }
 .footer-brand { display: flex; flex-direction: column; gap: 18px; }
@@ -467,12 +458,15 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
 .footer-col a { color: var(--text-muted); font-size: 0.9rem; transition: var(--transition); cursor: pointer; }
 .footer-col a:hover { color: var(--gold); padding-left: 6px; }
+
+/* Centered Footer Bottom */
 .footer-bottom {
   padding-top: 30px; border-top: 1px solid rgba(212, 175, 55, 0.1);
-  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;
+  display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 12px;
+  text-align: center;
 }
-.footer-bottom p { font-size: 0.82rem; color: var(--text-muted); letter-spacing: 0.05em; }
-.footer-bottom .made-with { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--gold); }
+.footer-bottom p.copyright { font-size: 0.85rem; color: var(--text-muted); letter-spacing: 0.05em; }
+.footer-bottom p.powered { font-size: 0.75rem; color: var(--gold); letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600; }
 
 /* FLOATING WHATSAPP BUTTON - BRAND COLOR */
 .whatsapp-float {
@@ -527,10 +521,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 /* RESPONSIVE - NO SHAKING */
 @media (max-width: 1024px) {
-  .hero-inner, .welcome-inner, .about-inner, .prayer-inner, .contact-inner { grid-template-columns: 1fr; gap: 50px; }
+  .welcome-inner, .about-inner, .prayer-inner, .contact-inner { grid-template-columns: 1fr; gap: 50px; }
   .ministry-grid, .teachings-grid, .testimonies-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
-  .hero-image-wrap { max-width: 400px; margin: 0 auto; }
 }
 @media (max-width: 768px) {
   .section { padding: 80px 0; }
@@ -548,25 +541,16 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .hero-buttons .btn { justify-content: center; }
   .word-card { padding: 50px 28px; }
   .prayer-form-wrap { padding: 40px 26px; }
-  .about-image-frame, .hero-image-frame { transform: none; }
-  .about-image-frame:hover, .hero-image-frame:hover { transform: scale(1.02); }
+  .about-image-frame { animation: none; transform: none; } /* Disable complex animation on mobile for performance */
+  .about-image-frame:hover { transform: scale(1.02); }
   .footer-bottom { flex-direction: column; text-align: center; }
   .whatsapp-float { width: 54px; height: 54px; bottom: 20px; right: 20px; }
   .whatsapp-float svg { width: 26px; height: 26px; }
   .modal { padding: 40px 26px; }
-  
-  /* Trademark positioning on mobile to avoid overlap */
-  .ks1-trademark {
-    font-size: 0.6rem;
-    bottom: 85px;
-    letter-spacing: 0.15em;
-    white-space: normal;
-    line-height: 1.4;
-  }
 }
 @media (max-width: 480px) {
   .container { padding: 0 18px; }
-  .hero-title { font-size: 2rem; }
+  .hero-title { font-size: 2.2rem; }
   .section-title { font-size: 1.8rem; }
 }
 ::-webkit-scrollbar { width: 10px; }
@@ -576,9 +560,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 </style>
 </head>
 <body>
-
-<!-- KS1 TRADEMARK WATERMARK - Fixed at bottom center -->
-<div class="ks1-trademark">Powered by KS1 Empire Global Foundation (KS1EGF)</div>
 
 <!-- NAVIGATION -->
 <nav class="nav" id="nav">
@@ -617,11 +598,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
             Share Ministry
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
           </button>
-        </div>
-      </div>
-      <div class="hero-image-wrap">
-        <div class="hero-image-frame">
-          <img src="https://i.ibb.co/yFmmwcLH/1784188041.png" alt="Elohim's Holy Fire Logo">
         </div>
       </div>
     </div>
@@ -1010,9 +986,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         </ul>
       </div>
     </div>
+    
+    <!-- Centered Footer Bottom as requested -->
     <div class="footer-bottom">
-      <p>© 2026 Elohim's Holy Fire Revival Ministry. All rights reserved.</p>
-      <p class="made-with">Made with faith, fire, and love for the Kingdom.</p>
+      <p class="copyright">© 2026 Elohim's Holy Fire Revival Ministry</p>
+      <p class="powered">Powered by KS1 Empire Global Foundation (KS1EGF)</p>
     </div>
   </div>
 </footer>
