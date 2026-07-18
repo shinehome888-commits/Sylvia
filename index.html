@@ -3,1415 +3,533 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-<meta name="description" content="Elohim's Holy Fire Revival Ministry — Senya-Beraku. A prophetic revival ministry led by Prophetess Sylvia." />
-<title>Elohim's Holy Fire Revival Ministry — Prophetess Sylvia</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+<title>Elohim's Holy Fire Revival Ministry</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Cormorant+Garamond:ital,wght@0,500;1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <style>
-:root {
-  --purple: #4B145F;
-  --deep-purple: #1B0B2E;
-  --royal-purple: #6B2D8C;
-  --gold: #D4AF37;
-  --gold-light: #F4D06F;
-  --gold-dark: #b8962e;
-  --fire-orange: #E85D04;
-  --fire-soft: #FF7A2E;
-  --cream: #FFF8E7;
-  --ivory: #FDF6E3;
-  --emerald: #146B45;
-  --dark: #0D0B12;
-  --charcoal: #1A1420;
-  --text-light: #F5EFD9;
-  --text-muted: #B8A9C9;
-  --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
+:root{--purple:#4B145F;--deep:#1B0B2E;--gold:#D4AF37;--gold-dk:#b8962e;--fire:#E85D04;--cream:#FFF8E7;--dark:#0D0B12;--char:#1A1420;--txt:#F5EFD9;--mut:#B8A9C9;--tr:all 0.4s cubic-bezier(0.25,0.46,0.45,0.94)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{overflow-x:hidden;width:100%;max-width:100vw;scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--dark);color:var(--txt);line-height:1.7;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'Cinzel',serif;font-weight:600;letter-spacing:0.02em;line-height:1.2}
+a{color:inherit;text-decoration:none;transition:var(--tr)}
+img{max-width:100%;display:block}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+.container{width:100%;max-width:1240px;margin:0 auto;padding:0 20px}
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html, body { 
-  overflow-x: hidden; 
-  width: 100%; 
-  max-width: 100vw; 
-  scroll-behavior: smooth; 
-}
-body {
-  font-family: 'Inter', sans-serif;
-  background: var(--dark);
-  color: var(--text-light);
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
-}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;font-size:0.8rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;border-radius:12px;transition:var(--tr);white-space:nowrap}
+.btn-p{background:linear-gradient(135deg,var(--gold),var(--fire));color:var(--deep);box-shadow:0 5px 0 var(--gold-dk),0 10px 20px rgba(212,175,55,0.3);transform:translateY(0)}
+.btn-p:hover{transform:translateY(-3px);box-shadow:0 8px 0 var(--gold-dk),0 15px 30px rgba(212,175,55,0.4)}
+.btn-p:active{transform:translateY(4px);box-shadow:0 0 0 var(--gold-dk)}
+.btn-o{background:transparent;color:var(--cream);border:2px solid var(--gold);box-shadow:0 5px 0 rgba(212,175,55,0.3),0 10px 20px rgba(0,0,0,0.2)}
+.btn-o:hover{background:var(--gold);color:var(--deep);transform:translateY(-3px)}
 
-h1, h2, h3, h4 { font-family: 'Cinzel', serif; font-weight: 600; letter-spacing: 0.02em; line-height: 1.2; }
-.script-font { font-family: 'Cormorant Garamond', serif; font-style: italic; }
-a { color: inherit; text-decoration: none; transition: var(--transition); }
-img { max-width: 100%; display: block; }
-button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:16px 0;background:rgba(13,11,18,0.95);backdrop-filter:blur(15px);border-bottom:1px solid rgba(212,175,55,0.15)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.nav-br{display:flex;align-items:center;gap:12px}
+.nav-br img{height:45px;width:auto;filter:drop-shadow(0 0 6px rgba(212,175,55,0.4))}
+.nav-ln{display:flex;align-items:center;gap:24px;list-style:none}
+.nav-ln a{font-size:0.75rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--txt);position:relative;padding:6px 0;cursor:pointer}
+.nav-ln a:hover{color:var(--gold)}
+.nav-tg{display:none;flex-direction:column;gap:5px;padding:8px;cursor:pointer;z-index:1001}
+.nav-tg span{display:block;width:24px;height:2px;background:var(--gold);transition:var(--tr);border-radius:2px}
+.nav-tg.act span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-tg.act span:nth-child(2){opacity:0}
+.nav-tg.act span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
-.container { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+.ps{display:none;min-height:100vh;padding-top:85px;animation:fadeUp 0.6s ease-out}
+.ps.act{display:block}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 
-/* 3D BUTTON EFFECTS */
-.btn {
-  display: inline-flex; align-items: center; gap: 10px;
-  padding: 16px 34px; font-size: 0.82rem; font-weight: 700;
-  letter-spacing: 0.18em; text-transform: uppercase; border-radius: 12px;
-  transition: var(--transition); position: relative; overflow: hidden; white-space: nowrap;
-}
-.btn-primary {
-  background: linear-gradient(135deg, var(--gold) 0%, var(--fire-orange) 100%);
-  color: var(--deep-purple);
-  box-shadow: 0 6px 0 var(--gold-dark), 0 12px 25px rgba(212, 175, 55, 0.35);
-  transform: translateY(0);
-}
-.btn-primary:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 0 var(--gold-dark), 0 18px 35px rgba(212, 175, 55, 0.45);
-}
-.btn-primary:active {
-  transform: translateY(6px);
-  box-shadow: 0 0px 0 var(--gold-dark), 0 2px 5px rgba(212, 175, 55, 0.3);
-}
-.btn-outline {
-  background: transparent; color: var(--cream);
-  border: 2px solid var(--gold);
-  box-shadow: 0 6px 0 rgba(212, 175, 55, 0.3), 0 12px 25px rgba(0,0,0,0.2);
-  transform: translateY(0);
-}
-.btn-outline:hover {
-  background: var(--gold); color: var(--deep-purple);
-  transform: translateY(-4px);
-  box-shadow: 0 10px 0 rgba(184, 150, 46, 0.5), 0 18px 35px rgba(0,0,0,0.3);
-}
-.btn-outline:active {
-  transform: translateY(6px);
-  box-shadow: 0 0px 0 rgba(212, 175, 55, 0.3), 0 2px 5px rgba(0,0,0,0.2);
-}
+.hero{min-height:100dvh;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:110px 0 80px;background:linear-gradient(180deg,rgba(13,11,18,0.2) 0%,rgba(27,11,46,0.4) 100%),url('https://i.ibb.co/rKg6RWrT/IMG-9085.jpg') no-repeat center center/cover;background-position:center 15%}
+.hero-in{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center;width:100%;max-width:900px}
+@keyframes gentleFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.hero-tx{animation:fadeUp 1.2s ease-out,gentleFloat 6s ease-in-out infinite 1.2s}
+.hero-w{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:var(--gold);letter-spacing:0.2em;margin-bottom:20px;display:inline-flex;align-items:center;gap:14px}
+.hero-w::before,.hero-w::after{content:'';width:30px;height:1px;background:var(--gold)}
+.hero-t{font-size:clamp(2.2rem,6vw,4rem);font-weight:700;line-height:1.05;margin-bottom:20px;color:var(--cream)}
+.hero-t .ft{display:block;background:linear-gradient(135deg,var(--gold),var(--fire) 50%,var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 0 15px rgba(212,175,55,0.3))}
+.hero-d{font-size:1rem;color:var(--txt);max-width:600px;margin-bottom:30px;line-height:1.7}
+.hero-b{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
 
-/* NAVIGATION */
-.nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-  padding: 18px 0; transition: var(--transition); background: rgba(13, 11, 18, 0.95);
-  backdrop-filter: blur(15px); border-bottom: 1px solid rgba(212, 175, 55, 0.15);
-}
-.nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-.nav-brand { display: flex; align-items: center; gap: 14px; }
-.nav-brand img { height: 50px; width: auto; filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.4)); }
-.nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
-.nav-links a {
-  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase;
-  color: var(--text-light); position: relative; padding: 6px 0; cursor: pointer;
-}
-.nav-links a::after {
-  content: ''; position: absolute; left: 0; bottom: 0; width: 0; height: 2px;
-  background: var(--gold); transition: var(--transition);
-}
-.nav-links a:hover { color: var(--gold); }
-.nav-links a:hover::after { width: 100%; }
-.nav-toggle { display: none; flex-direction: column; gap: 5px; padding: 8px; cursor: pointer; z-index: 1001; }
-.nav-toggle span { display: block; width: 26px; height: 2px; background: var(--gold); transition: var(--transition); border-radius: 2px; }
-.nav-toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.nav-toggle.active span:nth-child(2) { opacity: 0; }
-.nav-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.sec{padding:80px 0;position:relative}
+.sec-l{display:inline-block;font-size:0.75rem;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;position:relative;padding-left:45px}
+.sec-l::before{content:'';position:absolute;left:0;top:50%;width:30px;height:2px;background:linear-gradient(90deg,transparent,var(--gold))}
+.sec-t{font-size:clamp(1.8rem,4vw,2.8rem);color:var(--cream);margin-bottom:20px}
+.sec-t .ac{background:linear-gradient(135deg,var(--gold),var(--fire));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.sec-st{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--mut);max-width:650px;font-style:italic}
+.sec-h{text-align:center;margin-bottom:50px}
+.sec-h .sec-l{padding-left:0}.sec-h .sec-l::before{display:none}.sec-h .sec-st{margin:0 auto}
 
-/* PAGE SECTIONS (SPA Behavior) */
-.page-section {
-  display: none;
-  min-height: 100vh;
-  padding-top: 90px;
-  animation: fadeInPage 0.6s ease-out;
-}
-.page-section.active { display: block; }
-@keyframes fadeInPage {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+.c3{background:linear-gradient(135deg,rgba(75,20,95,0.2),rgba(27,11,46,0.3));border:1px solid rgba(212,175,55,0.2);border-radius:16px;transition:var(--tr);box-shadow:0 10px 25px rgba(0,0,0,0.3)}
+.c3:hover{transform:perspective(1000px) rotateX(2deg) translateY(-6px) scale(1.01);border-color:rgba(212,175,55,0.5);box-shadow:0 20px 40px rgba(0,0,0,0.5),0 0 20px rgba(212,175,55,0.15)}
 
-/* HERO SECTION */
-.hero {
-  min-height: 100dvh;
-  position: relative; display: flex; align-items: center; justify-content: center;
-  overflow: hidden; padding: 120px 0 80px;
-  background: linear-gradient(180deg, rgba(13, 11, 18, 0.2) 0%, rgba(27, 11, 46, 0.4) 100%),
-              url('https://i.ibb.co/rKg6RWrT/IMG-9085.jpg') no-repeat center center;
-  background-size: cover;
-  background-position: center 15%;
-}
-.particles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 1; }
-.particle {
-  position: absolute; width: 3px; height: 3px; background: var(--gold); border-radius: 50%;
-  opacity: 0; box-shadow: 0 0 8px var(--gold); animation: rise 12s linear infinite;
-}
-@keyframes rise {
-  0% { transform: translateY(100vh) translateX(0); opacity: 0; }
-  10% { opacity: 0.8; }
-  90% { opacity: 0.8; }
-  100% { transform: translateY(-10vh) translateX(40px); opacity: 0; }
-}
-.hero-inner {
-  position: relative; z-index: 2; display: flex; flex-direction: column;
-  align-items: center; text-align: center; width: 100%; max-width: 900px;
-}
+/* 3D MOVING GALLERY */
+.gal{background:linear-gradient(180deg,var(--char),var(--dark))}
+.gal-g{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;perspective:1000px;margin-top:30px}
+.gal-i{position:relative;aspect-ratio:1;border-radius:14px;overflow:hidden;cursor:pointer;border:2px solid rgba(212,175,55,0.3);box-shadow:0 10px 25px rgba(0,0,0,0.5);transition:transform 0.5s ease,box-shadow 0.5s ease;animation:float3d 6s ease-in-out infinite}
+.gal-i:nth-child(even){animation-delay:-3s}
+.gal-i:hover{transform:translateY(-10px) rotateX(5deg) rotateY(5deg) scale(1.05);box-shadow:0 20px 40px rgba(212,175,55,0.4);border-color:var(--gold);z-index:10}
+.gal-i img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease}
+.gal-i:hover img{transform:scale(1.15)}
+@keyframes float3d{0%,100%{transform:translateY(0) rotateX(0) rotateY(0)}50%{transform:translateY(-8px) rotateX(2deg) rotateY(-2deg)}}
 
-@keyframes gentleFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
-}
+.lb{position:fixed;inset:0;background:rgba(5,3,8,0.95);backdrop-filter:blur(10px);z-index:3000;display:none;align-items:center;justify-content:center;padding:20px;opacity:0;transition:opacity 0.3s}
+.lb.act{display:flex;opacity:1}
+.lb img{max-width:90%;max-height:90vh;object-fit:contain;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,0.6);border:2px solid var(--gold)}
+.lb-x{position:absolute;top:20px;right:20px;width:45px;height:45px;background:rgba(212,175,55,0.2);border:2px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:1.8rem;cursor:pointer;transition:var(--tr)}
+.lb-x:hover{background:var(--gold);color:var(--deep);transform:rotate(90deg)}
 
-.hero-text { 
-  animation: fadeUp 1.2s ease-out, gentleFloat 6s ease-in-out infinite 1.2s; 
-}
-@keyframes fadeUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+.abt-in{display:grid;grid-template-columns:0.9fr 1.1fr;gap:60px;align-items:center}
+.abt-f{position:relative;aspect-ratio:4/5;border-radius:18px;overflow:hidden;background:linear-gradient(135deg,var(--purple),var(--deep));box-shadow:0 25px 50px rgba(0,0,0,0.4),0 0 30px rgba(212,175,55,0.15);border:2px solid rgba(212,175,55,0.3);animation:pan3d 10s ease-in-out infinite}
+@keyframes pan3d{0%{transform:perspective(1000px) rotateY(8deg) translateX(20px)}50%{transform:perspective(1000px) rotateY(-8deg) translateX(-20px)}100%{transform:perspective(1000px) rotateY(8deg) translateX(20px)}}
+.abt-f:hover{animation-play-state:paused;transform:perspective(1000px) rotateY(0) scale(1.03)}
+.abt-f img{width:100%;height:100%;object-fit:cover}
+.abt-c p{color:var(--txt);margin-bottom:16px;line-height:1.8}
+.abt-i{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;color:var(--gold);line-height:1.6;margin-bottom:20px}
+.abt-q{margin-top:30px;padding:25px 30px;background:linear-gradient(135deg,rgba(75,20,95,0.3),rgba(27,11,46,0.4));border-left:4px solid var(--gold);border-radius:0 12px 12px 0;box-shadow:0 10px 25px rgba(0,0,0,0.3)}
+.abt-q p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:var(--cream);line-height:1.5;margin:0}
 
-.hero-welcome {
-  font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.1rem;
-  color: var(--gold); letter-spacing: 0.25em; margin-bottom: 20px;
-  display: inline-flex; align-items: center; gap: 14px;
-}
-.hero-welcome::before, .hero-welcome::after { content: ''; width: 40px; height: 1px; background: var(--gold); }
-.hero-title {
-  font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 700; line-height: 1.05;
-  margin-bottom: 26px; color: var(--cream); letter-spacing: 0.01em;
-}
-.hero-title .fire-text {
-  display: block; background: linear-gradient(135deg, var(--gold) 0%, var(--fire-orange) 50%, var(--gold-light) 100%);
-  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.3));
-}
-.hero-tagline { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-style: italic; color: var(--gold-light); margin-bottom: 22px; }
-.hero-description { font-size: 1.05rem; color: var(--text-light); max-width: 650px; margin-bottom: 40px; line-height: 1.8; }
-.hero-buttons { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
+.min-g{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.min-c{padding:30px 24px;position:relative;overflow:hidden}
+.min-c::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--fire));transform:scaleX(0);transform-origin:left;transition:transform 0.5s ease}
+.min-c:hover::before{transform:scaleX(1)}
+.min-ic{width:50px;height:50px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(212,175,55,0.15),rgba(232,93,4,0.1));border:1px solid rgba(212,175,55,0.3);border-radius:12px;margin-bottom:20px;transition:var(--tr)}
+.min-c:hover .min-ic{background:linear-gradient(135deg,var(--gold),var(--fire));transform:rotate(-5deg) scale(1.05)}
+.min-ic svg{width:26px;height:26px;fill:var(--gold);transition:var(--tr)}
+.min-c:hover .min-ic svg{fill:var(--deep)}
+.min-c h3{font-size:1.1rem;color:var(--cream);margin-bottom:10px}
+.min-c p{color:var(--mut);font-size:0.9rem;line-height:1.6}
 
-/* UTILITY & SECTIONS */
-.section { padding: 100px 0; position: relative; }
-.section-label {
-  display: inline-block; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.35em;
-  text-transform: uppercase; color: var(--gold); margin-bottom: 18px; position: relative; padding-left: 50px;
-}
-.section-label::before {
-  content: ''; position: absolute; left: 0; top: 50%; width: 36px; height: 2px;
-  background: linear-gradient(90deg, transparent, var(--gold));
-}
-.section-title { font-size: clamp(2rem, 4vw, 3.2rem); color: var(--cream); margin-bottom: 22px; }
-.section-title .accent {
-  background: linear-gradient(135deg, var(--gold) 0%, var(--fire-soft) 100%);
-  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
-}
-.section-subtitle { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; color: var(--text-muted); max-width: 720px; font-style: italic; }
-.section-header { text-align: center; margin-bottom: 60px; }
-.section-header .section-label { padding-left: 0; }
-.section-header .section-label::before { display: none; }
-.section-header .section-subtitle { margin: 0 auto; }
+.pry-in{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:center}
+.pry-v{text-align:center}
+.pry-vi{width:120px;height:120px;margin:0 auto 25px;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle,rgba(212,175,55,0.15),transparent 70%);border-radius:50%;position:relative}
+.pry-vi::before{content:'';position:absolute;inset:0;border-radius:50%;border:1px solid rgba(212,175,55,0.3);animation:pulse 3s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.15);opacity:0.3}}
+.pry-vi svg{width:60px;height:60px;fill:var(--gold);filter:drop-shadow(0 0 15px rgba(212,175,55,0.5))}
+.pry-v h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-style:italic;color:var(--gold);line-height:1.4;max-width:350px;margin:0 auto}
+.pry-f{background:linear-gradient(135deg,rgba(13,11,18,0.7),rgba(27,11,46,0.5));border:1px solid rgba(212,175,55,0.2);border-radius:18px;padding:40px 35px;backdrop-filter:blur(20px);box-shadow:0 25px 60px rgba(0,0,0,0.4)}
+.pry-f h3{font-size:1.4rem;color:var(--cream);margin-bottom:8px}
+.pry-f .fs{color:var(--mut);font-size:0.9rem;margin-bottom:25px;font-style:italic;font-family:'Cormorant Garamond',serif}
+.fg{margin-bottom:20px}
+.fg label{display:block;font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;font-weight:600}
+.fg input,.fg textarea{width:100%;padding:12px 16px;background:rgba(255,255,255,0.04);border:1px solid rgba(212,175,55,0.2);border-radius:10px;color:var(--cream);font-family:inherit;font-size:0.95rem;transition:var(--tr)}
+.fg input:focus,.fg textarea:focus{outline:none;border-color:var(--gold);background:rgba(212,175,55,0.05);box-shadow:0 0 0 3px rgba(212,175,55,0.1)}
+.fg textarea{resize:vertical;min-height:110px}
+.fc{display:flex;align-items:center;gap:10px;margin-bottom:22px;font-size:0.85rem;color:var(--mut)}
+.fc input[type="checkbox"]{width:16px;height:16px;accent-color:var(--gold);cursor:pointer}
+.fp{font-size:0.75rem;color:var(--mut);font-style:italic;margin-top:16px;text-align:center;opacity:0.8}
 
-/* 3D CARDS */
-.card-3d {
-  background: linear-gradient(135deg, rgba(75, 20, 95, 0.2) 0%, rgba(27, 11, 46, 0.3) 100%);
-  border: 1px solid rgba(212, 175, 55, 0.2);
-  border-radius: 18px;
-  transition: var(--transition);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3), 0 1px 0 rgba(255,255,255,0.05) inset;
-}
-.card-3d:hover {
-  transform: perspective(1000px) rotateX(2deg) translateY(-8px) scale(1.01);
-  border-color: rgba(212, 175, 55, 0.5);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(212, 175, 55, 0.15), 0 1px 0 rgba(255,255,255,0.1) inset;
-}
+.tea-g{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.tea-c{overflow:hidden;display:flex;flex-direction:column}
+.tea-im{aspect-ratio:16/10;background:linear-gradient(135deg,var(--purple),var(--deep));position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.tea-im::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(212,175,55,0.15),transparent 60%)}
+.tea-im img{width:110px;height:110px;object-fit:contain;position:relative;z-index:1;filter:drop-shadow(0 0 12px rgba(212,175,55,0.6))}
+.tea-cat{position:absolute;top:14px;left:14px;background:rgba(13,11,18,0.85);color:var(--gold);padding:5px 12px;border-radius:18px;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;font-weight:600;backdrop-filter:blur(10px);border:1px solid rgba(212,175,55,0.3);z-index:2}
+.tea-b{padding:24px 22px 26px;flex:1;display:flex;flex-direction:column}
+.tea-b h3{font-size:1.05rem;color:var(--cream);margin-bottom:10px;line-height:1.3}
+.tea-b p{color:var(--mut);font-size:0.9rem;line-height:1.6;margin-bottom:18px;flex:1}
+.t-ln{display:inline-flex;align-items:center;gap:6px;color:var(--gold);font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;font-weight:600;transition:var(--tr)}
+.t-ln:hover{gap:12px;color:var(--fire)}
 
-/* GALLERY SECTION - Mobile Optimized */
-.gallery { background: linear-gradient(180deg, var(--charcoal) 0%, var(--dark) 100%); }
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-top: 40px;
-}
-.gallery-item {
-  position: relative;
-  aspect-ratio: 1 / 1;
-  border-radius: 12px;
-  overflow: hidden;
-  cursor: pointer;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-  transition: var(--transition);
-  border: 2px solid rgba(212, 175, 55, 0.2);
-}
-.gallery-item:hover {
-  transform: translateY(-5px) scale(1.02);
-  border-color: var(--gold);
-  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3);
-}
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s ease;
-}
-.gallery-item:hover img {
-  transform: scale(1.1);
-}
+.tes-g{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:40px}
+.tes-c{padding:30px 26px;position:relative}
+.tes-c::before{content:'"';position:absolute;top:8px;right:20px;font-family:'Cormorant Garamond',serif;font-size:4rem;color:var(--gold);opacity:0.15;line-height:1}
+.tes-t{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--cream);line-height:1.6;margin-bottom:20px;position:relative;z-index:1}
+.tes-a{display:flex;align-items:center;gap:12px;padding-top:18px;border-top:1px solid rgba(212,175,55,0.15)}
+.tes-av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--fire));display:flex;align-items:center;justify-content:center;color:var(--deep);font-family:'Cinzel',serif;font-weight:700;font-size:0.9rem;flex-shrink:0}
+.tes-inf .nm{font-weight:600;color:var(--cream);font-size:0.9rem;margin-bottom:2px}
+.tes-inf .lc{font-size:0.75rem;color:var(--mut)}
 
-/* LIGHTBOX */
-.lightbox {
-  position: fixed;
-  inset: 0;
-  background: rgba(5, 3, 8, 0.95);
-  backdrop-filter: blur(10px);
-  z-index: 3000;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-.lightbox.active {
-  display: flex;
-  opacity: 1;
-}
-.lightbox img {
-  max-width: 90%;
-  max-height: 90vh;
-  object-fit: contain;
-  border-radius: 12px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
-  border: 2px solid var(--gold);
-}
-.lightbox-close {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  background: rgba(212, 175, 55, 0.2);
-  border: 2px solid var(--gold);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--gold);
-  font-size: 2rem;
-  cursor: pointer;
-  transition: var(--transition);
-}
-.lightbox-close:hover {
-  background: var(--gold);
-  color: var(--deep-purple);
-  transform: rotate(90deg);
-}
+.con-in{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+.con-inf h3{font-size:1.6rem;color:var(--cream);margin-bottom:16px}
+.con-inf>p{color:var(--mut);margin-bottom:30px;line-height:1.7;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:1.1rem}
+.con-l{list-style:none;display:flex;flex-direction:column;gap:16px}
+.con-i{display:flex;align-items:center;gap:16px;padding:16px 20px;background:rgba(255,255,255,0.03);border:1px solid rgba(212,175,55,0.15);border-radius:12px;transition:var(--tr);cursor:pointer}
+.con-i:hover{border-color:var(--gold);background:rgba(212,175,55,0.05);transform:translateX(5px)}
+.con-ic{width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(212,175,55,0.15),rgba(232,93,4,0.1));border-radius:10px;flex-shrink:0}
+.con-ic svg{width:20px;height:20px;fill:var(--gold)}
+.con-tx .lb{font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:3px;font-weight:600}
+.con-tx .vl{color:var(--cream);font-size:0.9rem;font-weight:500}
+.con-cta{padding:35px;background:linear-gradient(135deg,rgba(75,20,95,0.3),rgba(27,11,46,0.4));border:1px solid rgba(212,175,55,0.25);border-radius:18px;text-align:center;box-shadow:0 15px 40px rgba(0,0,0,0.3)}
+.con-cta h3{font-size:1.4rem;color:var(--cream);margin-bottom:12px}
+.con-cta p{color:var(--mut);margin-bottom:22px;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:1rem}
 
-/* WELCOME */
-.welcome { background: linear-gradient(180deg, var(--dark) 0%, var(--charcoal) 100%); }
-.welcome-inner { display: grid; grid-template-columns: 1fr 1.2fr; gap: 70px; align-items: center; }
-.welcome-visual {
-  position: relative; padding: 60px 40px; border-radius: 20px; text-align: center;
-  background: radial-gradient(circle at 30% 30%, rgba(212, 175, 55, 0.1) 0%, transparent 60%),
-              linear-gradient(135deg, rgba(75, 20, 95, 0.3) 0%, rgba(27, 11, 46, 0.5) 100%);
-  border: 1px solid rgba(212, 175, 55, 0.2);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
-}
-.welcome-visual .big-quote { font-family: 'Cormorant Garamond', serif; font-size: 6rem; color: var(--gold); line-height: 1; opacity: 0.4; margin-bottom: -30px; }
-.welcome-visual .fire-word {
-  font-family: 'Cinzel', serif; font-size: 3rem; font-weight: 700;
-  background: linear-gradient(135deg, var(--gold) 0%, var(--fire-orange) 100%);
-  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
-}
-.welcome-content p { font-size: 1.05rem; color: var(--text-light); margin-bottom: 20px; line-height: 1.85; }
-.welcome-content p.lead { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--cream); font-style: italic; margin-bottom: 28px; }
+.soc-g{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:850px;margin:0 auto}
+.soc-c{padding:30px 20px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px}
+.soc-ic{width:50px;height:50px;display:flex;align-items:center;justify-content:center;border-radius:12px;transition:var(--tr)}
+.soc-ic svg{width:24px;height:24px;fill:var(--cream)}
+.soc-c.tk .soc-ic{background:linear-gradient(135deg,#25F4EE,#FE2C55)}
+.soc-c.wa .soc-ic{background:linear-gradient(135deg,#25D366,#128C7E)}
+.soc-c.fb .soc-ic{background:linear-gradient(135deg,#1877F2,#0D5BBF)}
+.soc-c:hover .soc-ic{transform:scale(1.1) rotate(-5deg)}
+.soc-c h4{font-size:0.95rem;color:var(--cream);letter-spacing:0.08em}
+.soc-c p{font-size:0.8rem;color:var(--mut);line-height:1.4}
+.soc-h{font-size:0.72rem;color:var(--gold);letter-spacing:0.08em;font-weight:500}
 
-/* ABOUT */
-.about { background: radial-gradient(ellipse at 80% 20%, rgba(107, 45, 140, 0.15) 0%, transparent 50%), linear-gradient(180deg, var(--charcoal) 0%, var(--dark) 100%); }
-.about-inner { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 80px; align-items: center; }
+.ft{background:linear-gradient(180deg,var(--dark),#050308);padding:60px 0 30px;border-top:1px solid rgba(212,175,55,0.15);position:relative}
+.ft::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:180px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.ft-top{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;margin-bottom:50px}
+.ft-br{display:flex;flex-direction:column;gap:16px}
+.ft-br p{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--mut);font-size:1rem;line-height:1.6;max-width:300px}
+.ft-soc{display:flex;gap:10px;margin-top:8px}
+.ft-soc a{width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.04);border:1px solid rgba(212,175,55,0.2);border-radius:50%;transition:var(--tr)}
+.ft-soc a:hover{background:var(--gold);border-color:var(--gold);transform:translateY(-3px)}
+.ft-soc a svg{width:14px;height:14px;fill:var(--cream);transition:var(--tr)}
+.ft-soc a:hover svg{fill:var(--deep)}
+.ft-col h4{font-size:0.8rem;letter-spacing:0.15em;color:var(--gold);text-transform:uppercase;margin-bottom:18px;font-family:'Inter',sans-serif;font-weight:600}
+.ft-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.ft-col a{color:var(--mut);font-size:0.85rem;transition:var(--tr);cursor:pointer}
+.ft-col a:hover{color:var(--gold);padding-left:5px}
+.ft-bot{padding-top:25px;border-top:1px solid rgba(212,175,55,0.1);display:flex;justify-content:center;align-items:center;flex-direction:column;gap:10px;text-align:center}
+.ft-bot p.cr{font-size:0.8rem;color:var(--mut);letter-spacing:0.05em}
+.ft-bot p.pw{font-size:0.7rem;color:var(--gold);letter-spacing:0.12em;text-transform:uppercase;font-weight:600}
 
-@keyframes panRightToLeft {
-  0% { transform: perspective(1000px) rotateY(8deg) translateX(30px); }
-  50% { transform: perspective(1000px) rotateY(-8deg) translateX(-30px); }
-  100% { transform: perspective(1000px) rotateY(8deg) translateX(30px); }
-}
+.sh-fl{position:fixed;bottom:95px;right:22px;width:56px;height:56px;background:linear-gradient(135deg,var(--gold),var(--fire));border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 25px rgba(212,175,55,0.4),0 0 0 0 rgba(212,175,55,0.6);z-index:9998;transition:var(--tr);animation:waPulse 2.5s infinite;cursor:pointer;border:none}
+.sh-fl:hover{transform:scale(1.1)}
+.sh-fl svg{width:26px;height:26px;fill:var(--deep)}
+.wa-fl{position:fixed;bottom:22px;right:22px;width:56px;height:56px;background:linear-gradient(135deg,var(--gold),var(--fire));border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 25px rgba(212,175,55,0.4),0 0 0 0 rgba(212,175,55,0.6);z-index:9998;transition:var(--tr);animation:waPulse 2.5s infinite}
+@keyframes waPulse{0%{box-shadow:0 8px 25px rgba(212,175,55,0.4),0 0 0 0 rgba(212,175,55,0.6)}70%{box-shadow:0 8px 25px rgba(212,175,55,0.4),0 0 0 12px rgba(212,175,55,0)}100%{box-shadow:0 8px 25px rgba(212,175,55,0.4),0 0 0 0 rgba(212,175,55,0)}}
+.wa-fl:hover{transform:scale(1.1)}
+.wa-fl svg{width:28px;height:28px;fill:var(--deep)}
+.wa-fl .tt{position:absolute;right:68px;top:50%;transform:translateY(-50%);background:var(--dark);color:var(--cream);padding:7px 12px;border-radius:7px;font-size:0.75rem;letter-spacing:0.05em;white-space:nowrap;opacity:0;pointer-events:none;transition:var(--tr);border:1px solid rgba(212,175,55,0.3)}
+.wa-fl:hover .tt{opacity:1;right:74px}
 
-.about-image-frame {
-  position: relative; aspect-ratio: 4 / 5; border-radius: 20px; overflow: hidden;
-  background: linear-gradient(135deg, var(--purple) 0%, var(--deep-purple) 100%);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(212, 175, 55, 0.15);
-  border: 2px solid rgba(212, 175, 55, 0.3);
-  animation: panRightToLeft 10s ease-in-out infinite;
-}
-.about-image-frame:hover { 
-  animation-play-state: paused; 
-  transform: perspective(1000px) rotateY(0deg) scale(1.05); 
-}
-.about-image-frame img { width: 100%; height: 100%; object-fit: cover; }
-.about-content p { color: var(--text-light); margin-bottom: 18px; line-height: 1.85; }
-.about-intro { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-style: italic; color: var(--gold-light); line-height: 1.7; margin-bottom: 24px; }
-.about-quote {
-  margin-top: 40px; padding: 30px 34px;
-  background: linear-gradient(135deg, rgba(75, 20, 95, 0.3) 0%, rgba(27, 11, 46, 0.4) 100%);
-  border-left: 4px solid var(--gold); border-radius: 0 12px 12px 0;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-}
-.about-quote p { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.35rem; color: var(--cream); line-height: 1.6; margin: 0; }
+.mo{position:fixed;inset:0;background:rgba(5,3,8,0.9);backdrop-filter:blur(10px);z-index:2000;display:none;align-items:center;justify-content:center;padding:20px;opacity:0;transition:opacity 0.3s}
+.mo.act{display:flex;opacity:1}
+.md{background:linear-gradient(135deg,var(--char),var(--deep));border:1px solid rgba(212,175,55,0.3);border-radius:18px;max-width:600px;width:100%;max-height:90vh;overflow-y:auto;padding:40px 35px;position:relative;box-shadow:0 30px 60px rgba(0,0,0,0.6);transform:scale(0.95);transition:transform 0.3s}
+.mo.act .md{transform:scale(1)}
+.md-x{position:absolute;top:18px;right:18px;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.05);border:1px solid rgba(212,175,55,0.2);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:1.3rem;transition:var(--tr);cursor:pointer}
+.md-x:hover{background:var(--gold);color:var(--deep);transform:rotate(90deg)}
+.md h2{font-size:1.4rem;color:var(--cream);margin-bottom:8px;padding-right:35px}
+.md .mc{font-size:0.7rem;letter-spacing:0.25em;color:var(--gold);text-transform:uppercase;margin-bottom:18px;font-weight:600}
+.md .mdv{width:50px;height:1px;background:linear-gradient(90deg,var(--gold),transparent);margin-bottom:20px}
+.md .mb{color:var(--txt);line-height:1.8;font-size:0.95rem}
+.md .mb p{margin-bottom:14px}
 
-/* MINISTRY */
-.ministry { background: radial-gradient(ellipse at 50% 0%, rgba(232, 93, 4, 0.08) 0%, transparent 60%), linear-gradient(180deg, var(--dark) 0%, var(--charcoal) 100%); }
-.ministry-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-.ministry-card { padding: 40px 32px; position: relative; overflow: hidden; }
-.ministry-card::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-  background: linear-gradient(90deg, var(--gold), var(--fire-orange)); transform: scaleX(0); transform-origin: left; transition: transform 0.5s ease;
+@media(max-width:1024px){
+.abt-in,.pry-in,.con-in{grid-template-columns:1fr;gap:40px}
+.min-g,.tea-g,.tes-g{grid-template-columns:repeat(2,1fr)}
+.ft-top{grid-template-columns:1fr 1fr;gap:30px}
 }
-.ministry-card:hover::before { transform: scaleX(1); }
-.ministry-icon {
-  width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(232, 93, 4, 0.1) 100%);
-  border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 14px; margin-bottom: 24px; transition: var(--transition);
+@media(max-width:768px){
+.sec{padding:60px 0}
+.nav-ln{position:fixed;top:0;right:-100%;width:75%;max-width:300px;height:100vh;background:linear-gradient(180deg,var(--deep),var(--dark));flex-direction:column;justify-content:center;align-items:flex-start;padding:60px 35px;gap:24px;transition:right 0.4s ease;box-shadow:-15px 0 50px rgba(0,0,0,0.5);border-left:1px solid rgba(212,175,55,0.2)}
+.nav-ln.act{right:0}
+.nav-tg{display:flex}
+.min-g,.tea-g,.tes-g,.soc-g,.ft-top{grid-template-columns:1fr}
+.hero-b{flex-direction:column;align-items:stretch}
+.hero-b .btn{justify-content:center}
+.pry-f{padding:30px 20px}
+.fg input,.fg textarea{font-size:16px}
+.btn{width:100%;justify-content:center}
+.gal-g{grid-template-columns:repeat(2,1fr);gap:12px}
+.gal-i{animation:floatMob 4s ease-in-out infinite}
+.gal-i:hover{transform:translateY(-5px) scale(1.03)}
+@keyframes floatMob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.abt-f{animation:none;transform:none}
+.abt-f:hover{transform:scale(1.02)}
+.ft-bot{flex-direction:column;text-align:center}
+.wa-fl{width:52px;height:52px;bottom:18px;right:18px}
+.wa-fl svg{width:26px;height:26px}
+.sh-fl{width:52px;height:52px;bottom:85px;right:18px}
+.sh-fl svg{width:24px;height:24px}
+.md{padding:35px 22px}
 }
-.ministry-card:hover .ministry-icon { background: linear-gradient(135deg, var(--gold) 0%, var(--fire-orange) 100%); transform: rotate(-5deg) scale(1.05); }
-.ministry-icon svg { width: 30px; height: 30px; fill: var(--gold); transition: var(--transition); }
-.ministry-card:hover .ministry-icon svg { fill: var(--deep-purple); }
-.ministry-card h3 { font-size: 1.2rem; color: var(--cream); margin-bottom: 12px; }
-.ministry-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; }
-.ministry-card .card-num { position: absolute; top: 20px; right: 24px; font-family: 'Cinzel', serif; font-size: 2.5rem; font-weight: 700; color: rgba(212, 175, 55, 0.08); }
-
-/* DAILY WORD */
-.daily-word { background: radial-gradient(ellipse at 50% 50%, rgba(75, 20, 95, 0.4) 0%, transparent 60%), linear-gradient(180deg, var(--charcoal) 0%, var(--dark) 100%); }
-.word-card {
-  position: relative; max-width: 820px; margin: 0 auto; padding: 70px 60px;
-  background: linear-gradient(135deg, rgba(75, 20, 95, 0.25) 0%, rgba(27, 11, 46, 0.4) 100%);
-  border: 1px solid rgba(212, 175, 55, 0.25); border-radius: 24px; text-align: center;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4), 0 0 60px rgba(212, 175, 55, 0.1);
+@media(max-width:480px){
+.container{padding:0 16px}
+.hero-t{font-size:1.9rem}
+.sec-t{font-size:1.6rem}
+.gal-g{grid-template-columns:1fr;gap:10px}
 }
-.word-verse { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.4rem, 2.5vw, 2rem); font-style: italic; color: var(--cream); line-height: 1.5; margin-bottom: 24px; transition: opacity 0.4s ease; }
-.word-ref { font-family: 'Cinzel', serif; font-size: 0.9rem; letter-spacing: 0.2em; color: var(--gold); margin-bottom: 30px; text-transform: uppercase; }
-.word-divider { width: 60px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin: 0 auto 30px; }
-.word-reflection { font-size: 1rem; color: var(--text-muted); line-height: 1.8; max-width: 600px; margin: 0 auto 40px; font-style: italic; }
-.word-actions { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
-
-/* PRAYER */
-.prayer { background: radial-gradient(ellipse at 30% 50%, rgba(232, 93, 4, 0.12) 0%, transparent 50%), radial-gradient(ellipse at 70% 50%, rgba(75, 20, 95, 0.25) 0%, transparent 50%), linear-gradient(180deg, var(--dark) 0%, var(--deep-purple) 100%); }
-.prayer-inner { display: grid; grid-template-columns: 1fr 1.1fr; gap: 70px; align-items: center; }
-.prayer-visual { text-align: center; }
-.prayer-visual-icon {
-  width: 140px; height: 140px; margin: 0 auto 30px; display: flex; align-items: center; justify-content: center;
-  background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%); border-radius: 50%; position: relative;
-}
-.prayer-visual-icon::before { content: ''; position: absolute; inset: 0; border-radius: 50%; border: 1px solid rgba(212, 175, 55, 0.3); animation: pulse 3s ease-in-out infinite; }
-@keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.15); opacity: 0.3; } }
-.prayer-visual-icon svg { width: 70px; height: 70px; fill: var(--gold); filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.5)); }
-.prayer-visual h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic; color: var(--gold-light); line-height: 1.5; max-width: 380px; margin: 0 auto; }
-.prayer-form-wrap {
-  background: linear-gradient(135deg, rgba(13, 11, 18, 0.7) 0%, rgba(27, 11, 46, 0.5) 100%);
-  border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 20px; padding: 50px 44px;
-  backdrop-filter: blur(20px); box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
-}
-.prayer-form-wrap h3 { font-size: 1.6rem; color: var(--cream); margin-bottom: 10px; }
-.prayer-form-wrap .form-sub { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 30px; font-style: italic; font-family: 'Cormorant Garamond', serif; }
-.form-group { margin-bottom: 22px; }
-.form-group label { display: block; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; font-weight: 600; }
-.form-group input, .form-group textarea {
-  width: 100%; padding: 14px 18px; background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 10px; color: var(--cream);
-  font-family: inherit; font-size: 0.95rem; transition: var(--transition);
-}
-.form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--gold); background: rgba(212, 175, 55, 0.05); box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1); }
-.form-group textarea { resize: vertical; min-height: 120px; }
-.form-check { display: flex; align-items: center; gap: 12px; margin-bottom: 26px; font-size: 0.88rem; color: var(--text-muted); }
-.form-check input[type="checkbox"] { width: 18px; height: 18px; accent-color: var(--gold); cursor: pointer; }
-.form-privacy { font-size: 0.78rem; color: var(--text-muted); font-style: italic; margin-top: 18px; text-align: center; opacity: 0.8; }
-.form-privacy svg { width: 14px; height: 14px; fill: var(--gold); vertical-align: middle; margin-right: 6px; }
-
-/* TEACHINGS */
-.teachings { background: linear-gradient(180deg, var(--deep-purple) 0%, var(--dark) 100%); }
-.teachings-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-.teaching-card { overflow: hidden; display: flex; flex-direction: column; }
-.teaching-image {
-  aspect-ratio: 16 / 10; background: linear-gradient(135deg, var(--purple) 0%, var(--deep-purple) 100%);
-  position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;
-}
-.teaching-image::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.15) 0%, transparent 60%); }
-.teaching-image img { 
-  width: 130px; height: 130px; object-fit: contain; position: relative; z-index: 1; 
-  filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.6)); 
-}
-.teaching-category {
-  position: absolute; top: 16px; left: 16px; background: rgba(13, 11, 18, 0.85);
-  color: var(--gold); padding: 6px 14px; border-radius: 20px; font-size: 0.68rem;
-  letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600;
-  backdrop-filter: blur(10px); border: 1px solid rgba(212, 175, 55, 0.3); z-index: 2;
-}
-.teaching-body { padding: 28px 26px 30px; flex: 1; display: flex; flex-direction: column; }
-.teaching-body h3 { font-size: 1.15rem; color: var(--cream); margin-bottom: 12px; line-height: 1.3; }
-.teaching-body p { color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; margin-bottom: 22px; flex: 1; }
-.teaching-link {
-  display: inline-flex; align-items: center; gap: 8px; color: var(--gold);
-  font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; transition: var(--transition);
-}
-.teaching-link:hover { gap: 14px; color: var(--fire-soft); }
-.teaching-link svg { width: 14px; height: 14px; fill: currentColor; }
-
-/* TESTIMONIES */
-.testimonies { background: radial-gradient(ellipse at 80% 50%, rgba(107, 45, 140, 0.2) 0%, transparent 50%), linear-gradient(180deg, var(--charcoal) 0%, var(--dark) 100%); }
-.testimonies-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-bottom: 50px; }
-.testimony-card { padding: 36px 30px; position: relative; }
-.testimony-card::before { content: '"'; position: absolute; top: 10px; right: 24px; font-family: 'Cormorant Garamond', serif; font-size: 5rem; color: var(--gold); opacity: 0.15; line-height: 1; }
-.testimony-text { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-style: italic; color: var(--cream); line-height: 1.7; margin-bottom: 24px; position: relative; z-index: 1; }
-.testimony-author { display: flex; align-items: center; gap: 14px; padding-top: 20px; border-top: 1px solid rgba(212, 175, 55, 0.15); }
-.testimony-avatar {
-  width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--gold) 0%, var(--fire-orange) 100%);
-  display: flex; align-items: center; justify-content: center; color: var(--deep-purple);
-  font-family: 'Cinzel', serif; font-weight: 700; font-size: 1rem; flex-shrink: 0;
-}
-.testimony-info .name { font-weight: 600; color: var(--cream); font-size: 0.95rem; margin-bottom: 2px; }
-.testimony-info .location { font-size: 0.78rem; color: var(--text-muted); letter-spacing: 0.05em; }
-.testimonies-cta { text-align: center; }
-
-/* CONNECT */
-.connect { background: linear-gradient(180deg, var(--dark) 0%, var(--deep-purple) 100%); }
-.social-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 900px; margin: 0 auto; }
-.social-card { padding: 36px 24px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 16px; }
-.social-icon { width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; border-radius: 14px; transition: var(--transition); }
-.social-icon svg { width: 28px; height: 28px; fill: var(--cream); }
-.social-card.tiktok .social-icon { background: linear-gradient(135deg, #25F4EE, #FE2C55); }
-.social-card.whatsapp .social-icon { background: linear-gradient(135deg, #25D366, #128C7E); }
-.social-card.facebook .social-icon { background: linear-gradient(135deg, #1877F2, #0D5BBF); }
-.social-card:hover .social-icon { transform: scale(1.1) rotate(-5deg); }
-.social-card h4 { font-size: 1rem; color: var(--cream); letter-spacing: 0.1em; }
-.social-card p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; }
-.social-handle { font-size: 0.75rem; color: var(--gold); letter-spacing: 0.1em; font-weight: 500; }
-
-/* CONTACT */
-.contact { background: radial-gradient(ellipse at 50% 50%, rgba(212, 175, 55, 0.08) 0%, transparent 60%), linear-gradient(180deg, var(--deep-purple) 0%, var(--dark) 100%); }
-.contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
-.contact-info h3 { font-size: 1.8rem; color: var(--cream); margin-bottom: 18px; }
-.contact-info > p { color: var(--text-muted); margin-bottom: 36px; line-height: 1.8; font-style: italic; font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; }
-.contact-list { list-style: none; display: flex; flex-direction: column; gap: 18px; }
-.contact-item {
-  display: flex; align-items: center; gap: 18px; padding: 18px 22px;
-  background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(212, 175, 55, 0.15);
-  border-radius: 14px; transition: var(--transition); cursor: pointer;
-}
-.contact-item:hover { border-color: var(--gold); background: rgba(212, 175, 55, 0.05); transform: translateX(6px); }
-.contact-item-icon {
-  width: 44px; height: 44px; display: flex; align-items: center; justify-content: center;
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(232, 93, 4, 0.1) 100%);
-  border-radius: 12px; flex-shrink: 0;
-}
-.contact-item-icon svg { width: 22px; height: 22px; fill: var(--gold); }
-.contact-item-text .label { font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; font-weight: 600; }
-.contact-item-text .value { color: var(--cream); font-size: 0.95rem; font-weight: 500; }
-.contact-cta {
-  padding: 40px; background: linear-gradient(135deg, rgba(75, 20, 95, 0.3) 0%, rgba(27, 11, 46, 0.4) 100%);
-  border: 1px solid rgba(212, 175, 55, 0.25); border-radius: 20px; text-align: center;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
-}
-.contact-cta h3 { font-size: 1.5rem; color: var(--cream); margin-bottom: 14px; }
-.contact-cta p { color: var(--text-muted); margin-bottom: 26px; font-style: italic; font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; }
-
-/* FOOTER */
-.footer { background: linear-gradient(180deg, var(--dark) 0%, #050308 100%); padding: 80px 0 40px; border-top: 1px solid rgba(212, 175, 55, 0.15); position: relative; }
-.footer::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 200px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
-.footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 50px; margin-bottom: 60px; }
-.footer-brand { display: flex; flex-direction: column; gap: 18px; }
-.footer-brand p { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; max-width: 320px; }
-.footer-social { display: flex; gap: 12px; margin-top: 10px; }
-.footer-social a {
-  width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
-  background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(212, 175, 55, 0.2);
-  border-radius: 50%; transition: var(--transition);
-}
-.footer-social a:hover { background: var(--gold); border-color: var(--gold); transform: translateY(-3px); }
-.footer-social a svg { width: 16px; height: 16px; fill: var(--cream); transition: var(--transition); }
-.footer-social a:hover svg { fill: var(--deep-purple); }
-.footer-col h4 { font-size: 0.85rem; letter-spacing: 0.2em; color: var(--gold); text-transform: uppercase; margin-bottom: 22px; font-family: 'Inter', sans-serif; font-weight: 600; }
-.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
-.footer-col a { color: var(--text-muted); font-size: 0.9rem; transition: var(--transition); cursor: pointer; }
-.footer-col a:hover { color: var(--gold); padding-left: 6px; }
-
-/* Centered Footer Bottom */
-.footer-bottom {
-  padding-top: 30px; border-top: 1px solid rgba(212, 175, 55, 0.1);
-  display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 12px;
-  text-align: center;
-}
-.footer-bottom p.copyright { font-size: 0.85rem; color: var(--text-muted); letter-spacing: 0.05em; }
-.footer-bottom p.powered { font-size: 0.75rem; color: var(--gold); letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600; }
-
-/* FLOATING SHARE BUTTON */
-.share-float {
-  position: fixed; bottom: 100px; right: 25px; width: 60px; height: 60px;
-  background: linear-gradient(135deg, var(--gold) 0%, var(--fire-orange) 100%);
-  border-radius: 50%; display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4), 0 0 0 0 rgba(212, 175, 55, 0.6);
-  z-index: 9998; transition: var(--transition); animation: whatsappPulseBrand 2.5s infinite;
-  cursor: pointer; border: none;
-}
-.share-float:hover { transform: scale(1.1); }
-.share-float svg { width: 28px; height: 28px; fill: var(--deep-purple); }
-
-/* FLOATING WHATSAPP BUTTON - BRAND COLOR */
-.whatsapp-float {
-  position: fixed; bottom: 25px; right: 25px; width: 60px; height: 60px;
-  background: linear-gradient(135deg, var(--gold) 0%, var(--fire-orange) 100%);
-  border-radius: 50%; display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4), 0 0 0 0 rgba(212, 175, 55, 0.6);
-  z-index: 9998; transition: var(--transition); animation: whatsappPulseBrand 2.5s infinite;
-}
-@keyframes whatsappPulseBrand {
-  0% { box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4), 0 0 0 0 rgba(212, 175, 55, 0.6); }
-  70% { box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4), 0 0 0 15px rgba(212, 175, 55, 0); }
-  100% { box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4), 0 0 0 0 rgba(212, 175, 55, 0); }
-}
-.whatsapp-float:hover { transform: scale(1.1); }
-.whatsapp-float svg { width: 30px; height: 30px; fill: var(--deep-purple); }
-.whatsapp-float .tooltip {
-  position: absolute; right: 72px; top: 50%; transform: translateY(-50%);
-  background: var(--dark); color: var(--cream); padding: 8px 14px; border-radius: 8px;
-  font-size: 0.78rem; letter-spacing: 0.05em; white-space: nowrap; opacity: 0;
-  pointer-events: none; transition: var(--transition); border: 1px solid rgba(212, 175, 55, 0.3);
-}
-.whatsapp-float:hover .tooltip { opacity: 1; right: 78px; }
-
-/* MODAL */
-.modal-overlay {
-  position: fixed; inset: 0; background: rgba(5, 3, 8, 0.9); backdrop-filter: blur(10px);
-  z-index: 2000; display: none; align-items: center; justify-content: center; padding: 20px;
-  opacity: 0; transition: opacity 0.3s ease;
-}
-.modal-overlay.active { display: flex; opacity: 1; }
-.modal {
-  background: linear-gradient(135deg, var(--charcoal) 0%, var(--deep-purple) 100%);
-  border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 20px; max-width: 640px; width: 100%;
-  max-height: 90vh; overflow-y: auto; padding: 50px 44px; position: relative;
-  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6), 0 0 60px rgba(212, 175, 55, 0.1);
-  transform: scale(0.95); transition: transform 0.3s ease;
-}
-.modal-overlay.active .modal { transform: scale(1); }
-.modal-close {
-  position: absolute; top: 20px; right: 20px; width: 40px; height: 40px; border-radius: 50%;
-  background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(212, 175, 55, 0.2);
-  display: flex; align-items: center; justify-content: center; color: var(--gold);
-  font-size: 1.4rem; transition: var(--transition); cursor: pointer;
-}
-.modal-close:hover { background: var(--gold); color: var(--deep-purple); transform: rotate(90deg); }
-.modal h2 { font-size: 1.6rem; color: var(--cream); margin-bottom: 10px; padding-right: 40px; }
-.modal .modal-category { font-size: 0.72rem; letter-spacing: 0.3em; color: var(--gold); text-transform: uppercase; margin-bottom: 20px; font-weight: 600; }
-.modal .modal-divider { width: 60px; height: 1px; background: linear-gradient(90deg, var(--gold), transparent); margin-bottom: 24px; }
-.modal .modal-body { color: var(--text-light); line-height: 1.85; font-size: 1rem; }
-.modal .modal-body p { margin-bottom: 16px; }
-
-/* RESPONSIVE - PROFESSIONAL MOBILE FIXES */
-@media (max-width: 1024px) {
-  .welcome-inner, .about-inner, .prayer-inner, .contact-inner { grid-template-columns: 1fr; gap: 50px; }
-  .ministry-grid, .teachings-grid, .testimonies-grid { grid-template-columns: repeat(2, 1fr); }
-  .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
-}
-@media (max-width: 768px) {
-  .section { padding: 80px 0; }
-  
-  .hero {
-    background-position: center center;
-    background-size: cover;
-    min-height: 100dvh;
-    padding-top: 90px;
-  }
-  
-  .nav-links {
-    position: fixed; top: 0; right: -100%; width: 80%; max-width: 340px; height: 100vh;
-    background: linear-gradient(180deg, var(--deep-purple) 0%, var(--dark) 100%);
-    flex-direction: column; justify-content: center; align-items: flex-start;
-    padding: 80px 40px; gap: 28px; transition: right 0.4s ease;
-    box-shadow: -20px 0 60px rgba(0, 0, 0, 0.5); border-left: 1px solid rgba(212, 175, 55, 0.2);
-  }
-  .nav-links.active { right: 0; }
-  .nav-toggle { display: flex; }
-  
-  .ministry-grid, .teachings-grid, .testimonies-grid, .social-grid, .footer-top { grid-template-columns: 1fr; }
-  .hero-buttons { flex-direction: column; align-items: stretch; }
-  .hero-buttons .btn { justify-content: center; }
-  .word-card { padding: 50px 28px; }
-  
-  /* Prayer form perfectly visible on mobile */
-  .prayer-inner { gap: 40px; }
-  .prayer-form-wrap { padding: 30px 20px; width: 100%; }
-  .form-group input, .form-group textarea { font-size: 16px; }
-  .btn { width: 100%; justify-content: center; }
-  
-  /* Gallery optimized for mobile */
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-  }
-  
-  .about-image-frame { animation: none; transform: none; }
-  .about-image-frame:hover { transform: scale(1.02); }
-  .footer-bottom { flex-direction: column; text-align: center; }
-  
-  .whatsapp-float { width: 54px; height: 54px; bottom: 20px; right: 20px; }
-  .whatsapp-float svg { width: 26px; height: 26px; }
-  
-  .share-float { width: 54px; height: 54px; bottom: 90px; right: 20px; }
-  .share-float svg { width: 24px; height: 24px; }
-  
-  .modal { padding: 40px 26px; }
-}
-@media (max-width: 480px) {
-  .container { padding: 0 16px; }
-  .hero-title { font-size: 2rem; }
-  .section-title { font-size: 1.6rem; }
-  
-  /* Gallery single column on very small screens */
-  .gallery-grid {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-}
-::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-track { background: var(--dark); }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, var(--purple), var(--gold)); border-radius: 10px; }
-::selection { background: var(--gold); color: var(--deep-purple); }
+::-webkit-scrollbar{width:8px}
+::-webkit-scrollbar-track{background:var(--dark)}
+::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--purple),var(--gold));border-radius:8px}
+::selection{background:var(--gold);color:var(--deep)}
 </style>
 </head>
 <body>
-
-<!-- NAVIGATION -->
-<nav class="nav" id="nav">
-  <div class="container nav-inner">
-    <a href="#" class="nav-brand" onclick="showSection('home'); return false;">
-      <img src="https://i.ibb.co/yFmmwcLH/1784188041.png" alt="Elohim's Holy Fire Logo">
-    </a>
-    <ul class="nav-links" id="navLinks">
-      <li><a onclick="showSection('home')">Home</a></li>
-      <li><a onclick="showSection('about')">About</a></li>
-      <li><a onclick="showSection('ministry')">The Ministry</a></li>
-      <li><a onclick="showSection('gallery')">Gallery</a></li>
-      <li><a onclick="showSection('teachings')">Teachings</a></li>
-      <li><a onclick="showSection('prayer')">Prayer Request</a></li>
-      <li><a onclick="showSection('testimonies')">Testimonies</a></li>
-      <li><a onclick="showSection('contact')">Contact</a></li>
+<nav class="nav">
+  <div class="container nav-in">
+    <a href="#" class="nav-br" onclick="showSec('home');return false"><img src="https://i.ibb.co/yFmmwcLH/1784188041.png" alt="Logo"></a>
+    <ul class="nav-ln" id="navLn">
+      <li><a onclick="showSec('home')">Home</a></li>
+      <li><a onclick="showSec('about')">About</a></li>
+      <li><a onclick="showSec('ministry')">Ministry</a></li>
+      <li><a onclick="showSec('gallery')">Gallery</a></li>
+      <li><a onclick="showSec('prayer')">Prayer</a></li>
+      <li><a onclick="showSec('tes')">Testimonies</a></li>
+      <li><a onclick="showSec('con')">Contact</a></li>
     </ul>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="nav-tg" id="navTg"><span></span><span></span><span></span></button>
   </div>
 </nav>
-<!-- HERO SECTION (HOME) -->
-<section id="home" class="page-section active">
+<section id="home" class="ps act">
   <div class="hero">
-    <div class="particles" id="particles"></div>
-    <div class="container hero-inner">
-      <div class="hero-text">
-        <div class="hero-welcome">Welcome to</div>
-        <h1 class="hero-title">Elohim's Holy Fire <span class="fire-text">Revival Ministry</span></h1>
-        <p class="hero-tagline">Carrying the Fire. Proclaiming the Word. Awakening Lives.</p>
-        <p class="hero-description">Welcome to a ministry dedicated to prayer, revival, the Word of God, and the transformation of lives through the power and presence of God.</p>
-        <div class="hero-buttons">
-          <button class="btn btn-primary" onclick="showSection('ministry')">Enter the Ministry</button>
-          <button class="btn btn-outline" onclick="showSection('prayer')">Submit a Prayer Request</button>
+    <div class="hero-in">
+      <div class="hero-tx">
+        <div class="hero-w">Welcome to</div>
+        <h1 class="hero-t">Elohim's Holy Fire <span class="ft">Revival Ministry</span></h1>
+        <p class="hero-d">A ministry dedicated to prayer, revival, the Word of God, and the transformation of lives through the power and presence of God.</p>
+        <div class="hero-b">
+          <button class="btn btn-p" onclick="showSec('ministry')">Enter the Ministry</button>
+          <button class="btn btn-o" onclick="showSec('prayer')">Submit Prayer Request</button>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WELCOME SECTION -->
-<section id="welcome" class="page-section">
-  <div class="section welcome">
-    <div class="container welcome-inner">
-      <div class="welcome-visual">
-        <div class="big-quote">"</div>
-        <div class="fire-word">Welcome to the Fire</div>
-        <div style="font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--text-muted); font-size: 1.1rem; margin-top: 10px;">Where prayer meets presence</div>
-      </div>
-      <div class="welcome-content">
-        <span class="section-label">A Sacred Invitation</span>
-        <h2 class="section-title">A Place of <span class="accent">Prayer, Faith & Revival</span></h2>
-        <p class="lead">At Elohim's Holy Fire Revival Ministry, we believe that a life touched by God can become a light to others.</p>
-        <p>Through prayer, the Word, faith, and the power of the Holy Spirit, we seek to encourage hearts, strengthen families, and awaken a deeper hunger for God. We are a community built on the foundation of Jesus Christ.</p>
-        <p>Whether you are seeking God for the first time, or you have walked with Him for years, you are welcome here. Come as you are. Let the fire of God meet you.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT SECTION -->
-<section id="about" class="page-section">
-  <div class="section about">
-    <div class="container about-inner">
-      <div class="about-image-wrap">
-        <div class="about-image-frame">
-          <img src="https://i.ibb.co/39Ct3YH8/IMG-9084.jpg" alt="Prophetess Sylvia">
-        </div>
-      </div>
-      <div class="about-content">
-        <span class="section-label">Meet the Leader</span>
-        <h2 class="section-title">Meet <span class="accent">Prophetess Sylvia</span></h2>
-        <p class="about-intro">A woman of prayer, a vessel of the Holy Spirit, and a faithful shepherd of souls.</p>
+<section id="about" class="ps">
+  <div class="sec">
+    <div class="container abt-in">
+      <div class="abt-f"><img src="https://i.ibb.co/39Ct3YH8/IMG-9084.jpg" alt="Prophetess Sylvia"></div>
+      <div class="abt-c">
+        <span class="sec-l">Meet the Leader</span>
+        <h2 class="sec-t">Meet <span class="ac">Prophetess Sylvia</span></h2>
+        <p class="abt-i">A woman of prayer, a vessel of the Holy Spirit, and a faithful shepherd of souls.</p>
         <p>Prophetess Sylvia is the founder and leader of Elohim's Holy Fire Revival Ministry, based in Senya-Beraku. Called by God to carry the fire of revival to this generation, she leads with humility, passion, and an unwavering commitment to the Word of God.</p>
-        <p>Her life is marked by a deep devotion to prayer, a hunger for the presence of God, and a compassionate heart for people. Through her ministry, many have been encouraged, strengthened, and drawn into a closer walk with Jesus Christ.</p>
-        <div class="about-quote">
-          <p>"Today, I choose to do the work of God with joy, passion, and obedience."</p>
-        </div>
+        <p>Her life is marked by a deep devotion to prayer, a hunger for the presence of God, and a compassionate heart for people.</p>
+        <div class="abt-q"><p>"Today, I choose to do the work of God with joy, passion, and obedience."</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- MINISTRY SECTION -->
-<section id="ministry" class="page-section">
-  <div class="section ministry">
+<section id="ministry" class="ps">
+  <div class="sec">
     <div class="container">
-      <div class="section-header">
-        <span class="section-label">What We Stand For</span>
-        <h2 class="section-title">Elohim's Holy Fire <span class="accent">Revival Ministry</span></h2>
-        <p class="section-subtitle">A prophetic ministry carrying the fire of the Holy Spirit, proclaiming the Word of God, and awakening lives.</p>
+      <div class="sec-h">
+        <span class="sec-l">What We Stand For</span>
+        <h2 class="sec-t">Elohim's Holy Fire <span class="ac">Revival Ministry</span></h2>
+        <p class="sec-st">A prophetic ministry carrying the fire of the Holy Spirit, proclaiming the Word of God, and awakening lives.</p>
       </div>
-      <div class="ministry-grid">
-        <div class="card-3d ministry-card">
-          <span class="card-num">01</span>
-          <div class="ministry-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8 6 6 10 6 14a6 6 0 0012 0c0-4-2-8-6-12z"/></svg></div>
-          <h3>Prayer</h3>
-          <p>Seeking God through sincere and persistent prayer — the foundation upon which every revival is built.</p>
-        </div>
-        <div class="card-3d ministry-card">
-          <span class="card-num">02</span>
-          <div class="ministry-icon"><svg viewBox="0 0 24 24"><path d="M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 4 10.62 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8C20 8.61 17.41 3.8 13.5.67z"/></svg></div>
-          <h3>Revival</h3>
-          <p>Stirring hearts and awakening a deeper hunger for God — igniting the fire of the Holy Spirit in every soul.</p>
-        </div>
-        <div class="card-3d ministry-card">
-          <span class="card-num">03</span>
-          <div class="ministry-icon"><svg viewBox="0 0 24 24"><path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1z"/></svg></div>
-          <h3>The Word</h3>
-          <p>Growing in faith through the truth and teachings of Scripture — the lamp that guides our every step.</p>
-        </div>
-        <div class="card-3d ministry-card">
-          <span class="card-num">04</span>
-          <div class="ministry-icon"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8l-6.2 4.5 2.4-7.4L2 9.4h7.6z"/></svg></div>
-          <h3>Prophetic Ministry</h3>
-          <p>Encouraging, strengthening, and inspiring people through faith and spiritual guidance from the Holy Spirit.</p>
-        </div>
-        <div class="card-3d ministry-card">
-          <span class="card-num">05</span>
-          <div class="ministry-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div>
-          <h3>Evangelism</h3>
-          <p>Sharing the message of hope, faith, and the love of God — reaching souls for the Kingdom across the nations.</p>
-        </div>
-        <div class="card-3d ministry-card">
-          <span class="card-num">06</span>
-          <div class="ministry-icon"><svg viewBox="0 0 24 24"><path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3z"/></svg></div>
-          <h3>Transformation</h3>
-          <p>Believing that encounters with God can transform lives — turning brokenness into beauty and despair into hope.</p>
-        </div>
+      <div class="min-g">
+        <div class="c3 min-c"><div class="min-ic"><svg viewBox="0 0 24 24"><path d="M12 2C8 6 6 10 6 14a6 6 0 0012 0c0-4-2-8-6-12z"/></svg></div><h3>Prayer</h3><p>Seeking God through sincere and persistent prayer.</p></div>
+        <div class="c3 min-c"><div class="min-ic"><svg viewBox="0 0 24 24"><path d="M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 4 10.62 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8C20 8.61 17.41 3.8 13.5.67z"/></svg></div><h3>Revival</h3><p>Stirring hearts and awakening a deeper hunger for God.</p></div>
+        <div class="c3 min-c"><div class="min-ic"><svg viewBox="0 0 24 24"><path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1z"/></svg></div><h3>The Word</h3><p>Growing in faith through the truth and teachings of Scripture.</p></div>
+        <div class="c3 min-c"><div class="min-ic"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8l-6.2 4.5 2.4-7.4L2 9.4h7.6z"/></svg></div><h3>Prophetic Ministry</h3><p>Encouraging, strengthening, and inspiring people through faith.</p></div>
+        <div class="c3 min-c"><div class="min-ic"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div><h3>Evangelism</h3><p>Sharing the message of hope, faith, and the love of God.</p></div>
+        <div class="c3 min-c"><div class="min-ic"><svg viewBox="0 0 24 24"><path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3z"/></svg></div><h3>Transformation</h3><p>Believing that encounters with God can transform lives.</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- GALLERY SECTION - NEW -->
-<section id="gallery" class="page-section">
-  <div class="section gallery">
+<section id="gallery" class="ps">
+  <div class="sec gal">
     <div class="container">
-      <div class="section-header">
-        <span class="section-label">Ministry Moments</span>
-        <h2 class="section-title">Photo <span class="accent">Gallery</span></h2>
-        <p class="section-subtitle">Glimpses of the fire, faith, and fellowship at Elohim's Holy Fire Revival Ministry.</p>
+      <div class="sec-h">
+        <span class="sec-l">Ministry Moments</span>
+        <h2 class="sec-t">Photo <span class="ac">Gallery</span></h2>
+        <p class="sec-st">Glimpses of the fire, faith, and fellowship at Elohim's Holy Fire Revival Ministry.</p>
       </div>
-      
-      <div class="gallery-grid">
-        <div class="gallery-item" onclick="openLightbox(0)">
-          <img src="https://i.ibb.co/nvr0h20/IMG-9087.jpg" alt="Ministry Moment 1" loading="lazy">
-        </div>
-        <div class="gallery-item" onclick="openLightbox(1)">
-          <img src="https://i.ibb.co/Swy5dT64/1784188041.png" alt="Ministry Logo" loading="lazy">
-        </div>
-        <div class="gallery-item" onclick="openLightbox(2)">
-          <img src="https://i.ibb.co/3PbRw6s/IMG-9079.jpg" alt="Ministry Moment 2" loading="lazy">
-        </div>
-        <div class="gallery-item" onclick="openLightbox(3)">
-          <img src="https://i.ibb.co/Zz1s5j56/IMG-9081.jpg" alt="Ministry Moment 3" loading="lazy">
-        </div>
-        <div class="gallery-item" onclick="openLightbox(4)">
-          <img src="https://i.ibb.co/G44x9S4F/IMG-9082.jpg" alt="Ministry Moment 4" loading="lazy">
-        </div>
-        <div class="gallery-item" onclick="openLightbox(5)">
-          <img src="https://i.ibb.co/4wbcyMdh/IMG-9083.jpg" alt="Ministry Moment 5" loading="lazy">
-        </div>
-        <div class="gallery-item" onclick="openLightbox(6)">
-          <img src="https://i.ibb.co/RTgNxSW4/IMG-9084.jpg" alt="Prophetess Sylvia" loading="lazy">
-        </div>
-        <div class="gallery-item" onclick="openLightbox(7)">
-          <img src="https://i.ibb.co/x8CBsG9r/IMG-9085.jpg" alt="Ministry Moment 6" loading="lazy">
-        </div>
-        <div class="gallery-item" onclick="openLightbox(8)">
-          <img src="https://i.ibb.co/20YfKDh3/IMG-9086.jpg" alt="Ministry Moment 7" loading="lazy">
-        </div>
+      <div class="gal-g">
+        <div class="gal-i" onclick="openLb(0)"><img src="https://i.ibb.co/nvr0h20/IMG-9087.jpg" alt="Gallery 1" loading="lazy"></div>
+        <div class="gal-i" onclick="openLb(1)"><img src="https://i.ibb.co/Swy5dT64/1784188041.png" alt="Gallery 2" loading="lazy"></div>
+        <div class="gal-i" onclick="openLb(2)"><img src="https://i.ibb.co/3PbRw6s/IMG-9079.jpg" alt="Gallery 3" loading="lazy"></div>
+        <div class="gal-i" onclick="openLb(3)"><img src="https://i.ibb.co/Zz1s5j56/IMG-9081.jpg" alt="Gallery 4" loading="lazy"></div>
+        <div class="gal-i" onclick="openLb(4)"><img src="https://i.ibb.co/G44x9S4F/IMG-9082.jpg" alt="Gallery 5" loading="lazy"></div>
+        <div class="gal-i" onclick="openLb(5)"><img src="https://i.ibb.co/4wbcyMdh/IMG-9083.jpg" alt="Gallery 6" loading="lazy"></div>
+        <div class="gal-i" onclick="openLb(6)"><img src="https://i.ibb.co/RTgNxSW4/IMG-9084.jpg" alt="Gallery 7" loading="lazy"></div>
+        <div class="gal-i" onclick="openLb(7)"><img src="https://i.ibb.co/x8CBsG9r/IMG-9085.jpg" alt="Gallery 8" loading="lazy"></div>
+        <div class="gal-i" onclick="openLb(8)"><img src="https://i.ibb.co/20YfKDh3/IMG-9086.jpg" alt="Gallery 9" loading="lazy"></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- LIGHTBOX MODAL -->
-<div class="lightbox" id="lightbox">
-  <button class="lightbox-close" onclick="closeLightbox()">×</button>
-  <img id="lightbox-img" src="" alt="Gallery Image">
+<div class="lb" id="lb">
+  <button class="lb-x" onclick="closeLb()">×</button>
+  <img id="lbImg" src="" alt="Gallery Image">
 </div>
 
-<!-- DAILY WORD SECTION -->
-<section id="word" class="page-section">
-  <div class="section daily-word">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Daily Inspiration</span>
-        <h2 class="section-title">Today's <span class="accent">Word</span></h2>
-        <p class="section-subtitle">Let the Word of God speak into your day. Receive, reflect, and be renewed.</p>
-      </div>
-      <div class="card-3d word-card">
-        <div style="font-size: 0.75rem; letter-spacing: 0.35em; color: var(--gold); text-transform: uppercase; margin-bottom: 30px; font-weight: 500;">✦ Scripture of the Day ✦</div>
-        <div class="word-verse" id="wordVerse">Loading the Word...</div>
-        <div class="word-ref" id="wordRef">—</div>
-        <div class="word-divider"></div>
-        <p class="word-reflection" id="wordReflection"></p>
-        <div class="word-actions">
-          <button class="btn btn-primary" id="newWordBtn">New Word</button>
-          <button class="btn btn-outline" onclick="showSection('prayer')">Respond in Prayer</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PRAYER REQUEST SECTION -->
-<section id="prayer" class="page-section">
-  <div class="section prayer">
-    <div class="container prayer-inner">
-      <div class="prayer-visual">
-        <div class="prayer-visual-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2C8 6 6 10 6 14a6 6 0 0012 0c0-4-2-8-6-12zm0 18a4 4 0 01-4-4c0-2 1-4 4-8 3 4 4 6 4 8a4 4 0 01-4 4z"/></svg>
-        </div>
+<section id="prayer" class="ps">
+  <div class="sec">
+    <div class="container pry-in">
+      <div class="pry-v">
+        <div class="pry-vi"><svg viewBox="0 0 24 24"><path d="M12 2C8 6 6 10 6 14a6 6 0 0012 0c0-4-2-8-6-12zm0 18a4 4 0 01-4-4c0-2 1-4 4-8 3 4 4 6 4 8a4 4 0 01-4 4z"/></svg></div>
         <h3>"The effectual fervent prayer of a righteous man availeth much."</h3>
       </div>
-      <div class="card-3d prayer-form-wrap">
-        <span class="section-label">We Stand With You</span>
+      <div class="c3 pry-f">
+        <span class="sec-l">We Stand With You</span>
         <h3>Need Prayer?</h3>
-        <p class="form-sub">You do not have to walk through life alone. Share your prayer request and let us stand with you in faith via WhatsApp.</p>
-        <form id="prayerForm">
-          <div class="form-group">
-            <label for="prayerName">Your Name</label>
-            <input type="text" id="prayerName" name="name" required placeholder="Enter your name">
-          </div>
-          <div class="form-group">
-            <label for="prayerContact">Phone Number</label>
-            <input type="text" id="prayerContact" name="contact" required placeholder="How can we reach you?">
-          </div>
-          <div class="form-group">
-            <label for="prayerRequest">Your Prayer Request</label>
-            <textarea id="prayerRequest" name="request" required placeholder="Share what is on your heart..."></textarea>
-          </div>
-          <label class="form-check">
-            <input type="checkbox" id="prayerPrivate" name="private">
-            <span>Keep my request private (only Prophetess Sylvia will see it)</span>
-          </label>
-          <button type="submit" class="btn btn-primary">
-            Send Prayer Request via WhatsApp
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
-          </button>
-          <p class="form-privacy">
-            <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM12 17c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2z"/></svg>
-            Your prayer request is treated with care and respect.
-          </p>
+        <p class="fs">Share your prayer request and let us stand with you in faith via WhatsApp.</p>
+        <form id="pryFm">
+          <div class="fg"><label>Your Name</label><input type="text" id="pryNm" required placeholder="Enter your name"></div>
+          <div class="fg"><label>Phone Number</label><input type="text" id="pryCt" required placeholder="How can we reach you?"></div>
+          <div class="fg"><label>Your Prayer Request</label><textarea id="pryRq" required placeholder="Share what is on your heart..."></textarea></div>
+          <label class="fc"><input type="checkbox" id="pryPr"><span>Keep my request private (only Prophetess Sylvia will see it)</span></label>
+          <button type="submit" class="btn btn-p">Send via WhatsApp</button>
+          <p class="fp">Your prayer request is treated with care and respect.</p>
         </form>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TEACHINGS SECTION -->
-<section id="teachings" class="page-section">
-  <div class="section teachings">
+<section id="tea" class="ps">
+  <div class="sec">
     <div class="container">
-      <div class="section-header">
-        <span class="section-label">Feed Your Spirit</span>
-        <h2 class="section-title">Teachings & <span class="accent">Reflections</span></h2>
-        <p class="section-subtitle">Wisdom from the Word, prophetic encouragement, and reflections to strengthen your walk with God.</p>
+      <div class="sec-h">
+        <span class="sec-l">Feed Your Spirit</span>
+        <h2 class="sec-t">Teachings & <span class="ac">Reflections</span></h2>
       </div>
-      <div class="teachings-grid">
-        <article class="card-3d teaching-card" data-teaching="1">
-          <div class="teaching-image">
-            <img src="https://i.ibb.co/yFmmwcLH/1784188041.png" alt="Ministry Logo">
-            <span class="teaching-category">Bible Teaching</span>
-          </div>
-          <div class="teaching-body">
-            <h3>Walking in the Power of Prayer</h3>
-            <p>Discover how a life of prayer opens the heavens and releases the power of God into every situation.</p>
-            <a href="#" class="teaching-link" onclick="openTeaching(1); return false;">Read More <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          </div>
+      <div class="tea-g">
+        <article class="c3 tea-c">
+          <div class="tea-im"><img src="https://i.ibb.co/yFmmwcLH/1784188041.png" alt="Logo"><span class="tea-cat">Bible Teaching</span></div>
+          <div class="tea-b"><h3>Walking in the Power of Prayer</h3><p>Discover how a life of prayer opens the heavens and releases the power of God.</p><a href="#" class="t-ln" onclick="openTea(1);return false">Read More →</a></div>
         </article>
-        <article class="card-3d teaching-card" data-teaching="2">
-          <div class="teaching-image">
-            <img src="https://i.ibb.co/yFmmwcLH/1784188041.png" alt="Ministry Logo">
-            <span class="teaching-category">Prayer Reflection</span>
-          </div>
-          <div class="teaching-body">
-            <h3>The Fire That Never Goes Out</h3>
-            <p>A reflection on keeping the fire of the Holy Spirit burning in your life through daily surrender.</p>
-            <a href="#" class="teaching-link" onclick="openTeaching(2); return false;">Read More <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          </div>
+        <article class="c3 tea-c">
+          <div class="tea-im"><img src="https://i.ibb.co/yFmmwcLH/1784188041.png" alt="Logo"><span class="tea-cat">Prayer Reflection</span></div>
+          <div class="tea-b"><h3>The Fire That Never Goes Out</h3><p>A reflection on keeping the fire of the Holy Spirit burning through daily surrender.</p><a href="#" class="t-ln" onclick="openTea(2);return false">Read More →</a></div>
         </article>
-        <article class="card-3d teaching-card" data-teaching="3">
-          <div class="teaching-image">
-            <img src="https://i.ibb.co/yFmmwcLH/1784188041.png" alt="Ministry Logo">
-            <span class="teaching-category">Prophetic Encouragement</span>
-          </div>
-          <div class="teaching-body">
-            <h3>Seasons of Divine Visitations</h3>
-            <p>God is moving. Learn to recognize the seasons when Heaven is near and His presence is poured out.</p>
-            <a href="#" class="teaching-link" onclick="openTeaching(3); return false;">Read More <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          </div>
+        <article class="c3 tea-c">
+          <div class="tea-im"><img src="https://i.ibb.co/yFmmwcLH/1784188041.png" alt="Logo"><span class="tea-cat">Prophetic Word</span></div>
+          <div class="tea-b"><h3>Seasons of Divine Visitations</h3><p>Learn to recognize the seasons when Heaven is near and His presence is poured out.</p><a href="#" class="t-ln" onclick="openTea(3);return false">Read More →</a></div>
         </article>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIES SECTION -->
-<section id="testimonies" class="page-section">
-  <div class="section testimonies">
+<section id="tes" class="ps">
+  <div class="sec">
     <div class="container">
-      <div class="section-header">
-        <span class="section-label">God Is Faithful</span>
-        <h2 class="section-title">Testimonies of <span class="accent">Grace</span></h2>
-        <p class="section-subtitle">Real stories of God's faithfulness — lives touched, prayers answered, and hope restored.</p>
+      <div class="sec-h">
+        <span class="sec-l">God Is Faithful</span>
+        <h2 class="sec-t">Testimonies of <span class="ac">Grace</span></h2>
       </div>
-      <div class="testimonies-grid">
-        <div class="card-3d testimony-card">
-          <p class="testimony-text">God has been faithful to me, and I am grateful for the encouragement I received through this ministry. My prayer was answered in a mighty way.</p>
-          <div class="testimony-author">
-            <div class="testimony-avatar">A</div>
-            <div class="testimony-info">
-              <div class="name">Anonymous</div>
-              <div class="location">Senya-Beraku</div>
-            </div>
-          </div>
-        </div>
-        <div class="card-3d testimony-card">
-          <p class="testimony-text">Through prayer and the Word, God renewed my strength. I came broken, and I left with hope. Thank you, Prophetess Sylvia, for standing with me.</p>
-          <div class="testimony-author">
-            <div class="testimony-avatar">G</div>
-            <div class="testimony-info">
-              <div class="name">Grace M.</div>
-              <div class="location">Ghana</div>
-            </div>
-          </div>
-        </div>
-        <div class="card-3d testimony-card">
-          <p class="testimony-text">The prophetic word I received changed the direction of my life. God is truly speaking through this ministry. To Him be the glory.</p>
-          <div class="testimony-author">
-            <div class="testimony-avatar">D</div>
-            <div class="testimony-info">
-              <div class="name">Daniel K.</div>
-              <div class="location">Accra</div>
-            </div>
-          </div>
-        </div>
+      <div class="tes-g">
+        <div class="c3 tes-c"><p class="tes-t">God has been faithful to me, and I am grateful for the encouragement I received through this ministry.</p><div class="tes-a"><div class="tes-av">A</div><div class="tes-inf"><div class="nm">Anonymous</div><div class="lc">Senya-Beraku</div></div></div></div>
+        <div class="c3 tes-c"><p class="tes-t">Through prayer and the Word, God renewed my strength. I came broken, and I left with hope.</p><div class="tes-a"><div class="tes-av">G</div><div class="tes-inf"><div class="nm">Grace M.</div><div class="lc">Ghana</div></div></div></div>
+        <div class="c3 tes-c"><p class="tes-t">The prophetic word I received changed the direction of my life. God is truly speaking here.</p><div class="tes-a"><div class="tes-av">D</div><div class="tes-inf"><div class="nm">Daniel K.</div><div class="lc">Accra</div></div></div></div>
       </div>
-      <div class="testimonies-cta">
-        <button class="btn btn-primary" onclick="openTestimonyModal()">Share Your Testimony</button>
-      </div>
+      <div style="text-align:center"><button class="btn btn-p" onclick="openTes()">Share Your Testimony</button></div>
     </div>
   </div>
 </section>
 
-<!-- CONNECT SECTION -->
-<section id="connect" class="page-section">
-  <div class="section connect">
+<section id="con" class="ps">
+  <div class="sec">
     <div class="container">
-      <div class="section-header">
-        <span class="section-label">Stay Connected</span>
-        <h2 class="section-title">Connect With <span class="accent">the Ministry</span></h2>
-        <p class="section-subtitle">Follow us on social media and stay updated with the latest teachings, events, and prophetic words.</p>
+      <div class="sec-h">
+        <span class="sec-l">Get in Touch</span>
+        <h2 class="sec-t">Contact <span class="ac">the Ministry</span></h2>
       </div>
-      <div class="social-grid">
-        <a href="https://www.tiktok.com/@prophetesssylvia" target="_blank" class="card-3d social-card tiktok">
-          <div class="social-icon"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005.8 20.1a6.34 6.34 0 0010.86-4.43V8.45a8.16 8.16 0 004.77 1.52V6.53a4.85 4.85 0 01-1.84.16z"/></svg></div>
-          <h4>TikTok</h4>
-          <p>Prophetic videos & teachings</p>
-          <span class="social-handle">@prophetesssylvia</span>
-        </a>
-        <a href="https://wa.me/233248283692" target="_blank" class="card-3d social-card whatsapp">
-          <div class="social-icon"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
-          <h4>WhatsApp</h4>
-          <p>Direct ministry contact</p>
-          <span class="social-handle">Message Us</span>
-        </a>
-        <a href="https://www.facebook.com/elohimsholyfire" target="_blank" class="card-3d social-card facebook">
-          <div class="social-icon"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></div>
-          <h4>Facebook</h4>
-          <p>Community & updates</p>
-          <span class="social-handle">Elohim's Holy Fire</span>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT SECTION -->
-<section id="contact" class="page-section">
-  <div class="section contact">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Get in Touch</span>
-        <h2 class="section-title">Contact <span class="accent">the Ministry</span></h2>
-        <p class="section-subtitle">We would love to hear from you. Reach out for prayer, counsel, or to connect with the ministry via WhatsApp.</p>
-      </div>
-      <div class="contact-inner">
-        <div class="contact-info">
+      <div class="con-in">
+        <div class="con-inf">
           <h3>Reach Out to Us</h3>
-          <p>Whether you need prayer, have a question, or want to connect with the ministry, we are here for you. WhatsApp is our primary and fastest method of communication.</p>
-          <ul class="contact-list">
-            <li class="contact-item" onclick="window.open('https://wa.me/233248283692', '_blank')">
-              <div class="contact-item-icon"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
-              <div class="contact-item-text">
-                <div class="label">WhatsApp (Primary)</div>
-                <div class="value">+233 24 828 3692</div>
-              </div>
-            </li>
-            <li class="contact-item" onclick="window.open('https://wa.me/233546765655', '_blank')">
-              <div class="contact-item-icon"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
-              <div class="contact-item-text">
-                <div class="label">WhatsApp (Alternative)</div>
-                <div class="value">+233 54 676 5655</div>
-              </div>
-            </li>
-            <li class="contact-item">
-              <div class="contact-item-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg></div>
-              <div class="contact-item-text">
-                <div class="label">Location</div>
-                <div class="value">Senya-Beraku, Ghana</div>
-              </div>
-            </li>
-            <li class="contact-item">
-              <div class="contact-item-icon"><svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></div>
-              <div class="contact-item-text">
-                <div class="label">Ministry Leader</div>
-                <div class="value">Prophetess Sylvia</div>
-              </div>
-            </li>
+          <p>Whether you need prayer or want to connect, we are here for you. WhatsApp is our fastest method.</p>
+          <ul class="con-l">
+            <li class="con-i" onclick="window.open('https://wa.me/233248283692','_blank')"><div class="con-ic"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div><div class="con-tx"><div class="lb">WhatsApp (Primary)</div><div class="vl">+233 24 828 3692</div></div></li>
+            <li class="con-i" onclick="window.open('https://wa.me/233546765655','_blank')"><div class="con-ic"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div><div class="con-tx"><div class="lb">WhatsApp (Alt)</div><div class="vl">+233 54 676 5655</div></div></li>
+            <li class="con-i"><div class="con-ic"><svg viewBox="0 0 24 24"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg></div><div class="con-tx"><div class="lb">Location</div><div class="vl">Senya-Beraku, Ghana</div></div></li>
           </ul>
         </div>
-        <div class="card-3d contact-cta">
+        <div class="c3 con-cta">
           <h3>Let's Pray With You</h3>
-          <p>Send us your prayer request directly on WhatsApp, and our team will stand with you in faith.</p>
-          <button class="btn btn-primary" onclick="showSection('prayer')">
-            Submit Prayer Request
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
-          </button>
+          <p>Send us your prayer request directly on WhatsApp.</p>
+          <button class="btn btn-p" onclick="showSec('prayer')">Submit Prayer Request</button>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="footer">
+<footer class="ft">
   <div class="container">
-    <div class="footer-top">
-      <div class="footer-brand">
+    <div class="ft-top">
+      <div class="ft-br">
         <p>Carrying the Fire. Proclaiming the Word. Awakening Lives.</p>
-        <div class="footer-social">
-          <a href="https://www.tiktok.com/@prophetesssylvia" target="_blank" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005.8 20.1a6.34 6.34 0 0010.86-4.43V8.45a8.16 8.16 0 004.77 1.52V6.53a4.85 4.85 0 01-1.84.16z"/></svg></a>
-          <a href="https://wa.me/233248283692" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
-          <a href="https://www.facebook.com/elohimsholyfire" target="_blank" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        <div class="ft-soc">
+          <a href="https://www.tiktok.com/@prophetesssylvia" target="_blank"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005.8 20.1a6.34 6.34 0 0010.86-4.43V8.45a8.16 8.16 0 004.77 1.52V6.53a4.85 4.85 0 01-1.84.16z"/></svg></a>
+          <a href="https://wa.me/233248283692" target="_blank"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+          <a href="https://www.facebook.com/elohimsholyfire" target="_blank"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
         </div>
       </div>
-      <div class="footer-col">
-        <h4>Ministry</h4>
-        <ul>
-          <li><a onclick="showSection('home')">Home</a></li>
-          <li><a onclick="showSection('about')">About</a></li>
-          <li><a onclick="showSection('ministry')">The Ministry</a></li>
-          <li><a onclick="showSection('gallery')">Gallery</a></li>
-          <li><a onclick="showSection('teachings')">Teachings</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Connect</h4>
-        <ul>
-          <li><a onclick="showSection('prayer')">Prayer Request</a></li>
-          <li><a onclick="showSection('testimonies')">Testimonies</a></li>
-          <li><a onclick="showSection('contact')">Contact</a></li>
-        </ul>
-      </div>
+      <div class="ft-col"><h4>Ministry</h4><ul><li><a onclick="showSec('home')">Home</a></li><li><a onclick="showSec('about')">About</a></li><li><a onclick="showSec('ministry')">Ministry</a></li><li><a onclick="showSec('gallery')">Gallery</a></li></ul></div>
+      <div class="ft-col"><h4>Connect</h4><ul><li><a onclick="showSec('prayer')">Prayer</a></li><li><a onclick="showSec('tes')">Testimonies</a></li><li><a onclick="showSec('con')">Contact</a></li></ul></div>
     </div>
-    
-    <div class="footer-bottom">
-      <p class="copyright">© 2026 Elohim's Holy Fire Revival Ministry</p>
-      <p class="powered">Powered by KS1 Empire Global Foundation (KS1EGF)</p>
+    <div class="ft-bot">
+      <p class="cr">© 2026 Elohim's Holy Fire Revival Ministry</p>
+      <p class="pw">Powered by KS1 Empire Global Foundation (KS1EGF)</p>
     </div>
   </div>
 </footer>
 
-<!-- SHARE FLOAT BUTTON -->
-<button class="share-float" onclick="shareWebsite()" aria-label="Share Ministry">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-</button>
+<button class="sh-fl" onclick="shareSite()" aria-label="Share"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></button>
+<a href="https://wa.me/233248283692" class="wa-fl" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="tt">Chat with us</span></a>
 
-<!-- FLOATING WHATSAPP BUTTON -->
-<a href="https://wa.me/233248283692" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  <span class="tooltip">Chat with us</span>
-</a>
-
-<!-- TEACHING MODAL -->
-<div class="modal-overlay" id="modalOverlay">
-  <div class="modal" id="modal">
-    <button class="modal-close" onclick="closeModal('modalOverlay')">×</button>
-    <div class="modal-category" id="modalCategory"></div>
-    <h2 id="modalTitle"></h2>
-    <div class="modal-divider"></div>
-    <div class="modal-body" id="modalBody"></div>
-  </div>
-</div>
-
-<!-- TESTIMONY MODAL -->
-<div class="modal-overlay" id="testimonyModalOverlay">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModal('testimonyModalOverlay')">×</button>
-    <div class="modal-category">Share Your Story</div>
-    <h2>Share Your Testimony</h2>
-    <div class="modal-divider"></div>
-    <div class="modal-body">
-      <p style="color: var(--text-muted); font-style: italic; font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; margin-bottom: 26px;">Your testimony can encourage someone else's faith. Share what God has done for you via WhatsApp.</p>
-      <form id="testimonyForm">
-        <div class="form-group">
-          <label for="testimonyName">Your Name (or Anonymous)</label>
-          <input type="text" id="testimonyName" name="name" required placeholder="Your name">
-        </div>
-        <div class="form-group">
-          <label for="testimonyText">Your Testimony</label>
-          <textarea id="testimonyText" name="testimony" required placeholder="Share what God has done..." style="min-height: 150px;"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">
-          Send Testimony via WhatsApp
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
-        </button>
-        <p class="form-privacy">
-          <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM12 17c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2z"/></svg>
-          Your testimony will be treated with care and respect.
-        </p>
-      </form>
-    </div>
-  </div>
-</div>
+<div class="mo" id="moTea"><div class="md"><button class="md-x" onclick="closeMo('moTea')">×</button><div class="mc" id="mCat"></div><h2 id="mTit"></h2><div class="mdv"></div><div class="mb" id="mBod"></div></div></div>
+<div class="mo" id="moTes"><div class="md"><button class="md-x" onclick="closeMo('moTes')">×</button><div class="mc">Share Your Story</div><h2>Share Your Testimony</h2><div class="mdv"></div><div class="mb"><p style="color:var(--mut);font-style:italic;font-family:'Cormorant Garamond',serif;font-size:1.05rem;margin-bottom:20px">Your testimony can encourage someone else's faith. Share via WhatsApp.</p><form id="tesFm"><div class="fg"><label>Your Name</label><input type="text" id="tesNm" required placeholder="Your name"></div><div class="fg"><label>Your Testimony</label><textarea id="tesTx" required placeholder="Share what God has done..." style="min-height:120px"></textarea></div><button type="submit" class="btn btn-p">Send via WhatsApp</button><p class="fp">Your testimony will be treated with care.</p></form></div></div></div>
 
 <script>
-/* ============================================
-   CONFIGURATION
-   ============================================ */
-const WHATSAPP_NUMBER = "233248283692";
+const WA="233248283692";
+const gImgs=["https://i.ibb.co/nvr0h20/IMG-9087.jpg","https://i.ibb.co/Swy5dT64/1784188041.png","https://i.ibb.co/3PbRw6s/IMG-9079.jpg","https://i.ibb.co/Zz1s5j56/IMG-9081.jpg","https://i.ibb.co/G44x9S4F/IMG-9082.jpg","https://i.ibb.co/4wbcyMdh/IMG-9083.jpg","https://i.ibb.co/RTgNxSW4/IMG-9084.jpg","https://i.ibb.co/x8CBsG9r/IMG-9085.jpg","https://i.ibb.co/20YfKDh3/IMG-9086.jpg"];
 
-// Gallery images array
-const galleryImages = [
-  "https://i.ibb.co/nvr0h20/IMG-9087.jpg",
-  "https://i.ibb.co/Swy5dT64/1784188041.png",
-  "https://i.ibb.co/3PbRw6s/IMG-9079.jpg",
-  "https://i.ibb.co/Zz1s5j56/IMG-9081.jpg",
-  "https://i.ibb.co/G44x9S4F/IMG-9082.jpg",
-  "https://i.ibb.co/4wbcyMdh/IMG-9083.jpg",
-  "https://i.ibb.co/RTgNxSW4/IMG-9084.jpg",
-  "https://i.ibb.co/x8CBsG9r/IMG-9085.jpg",
-  "https://i.ibb.co/20YfKDh3/IMG-9086.jpg"
-];
-
-/* ============================================
-   SINGLE PAGE NAVIGATION (SPA)
-   ============================================ */
-function showSection(sectionId) {
-  document.querySelectorAll('.page-section').forEach(sec => {
-    sec.classList.remove('active');
-  });
-  const target = document.getElementById(sectionId);
-  if (target) {
-    target.classList.add('active');
-  }
-  
-  if (sectionId === 'home') {
-    document.body.style.overflow = 'hidden';
-  } else {
-    document.body.style.overflow = 'auto';
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-  
-  document.getElementById('navLinks').classList.remove('active');
-  document.getElementById('navToggle').classList.remove('active');
+function showSec(id){
+  document.querySelectorAll('.ps').forEach(s=>s.classList.remove('act'));
+  const t=document.getElementById(id);
+  if(t)t.classList.add('act');
+  document.body.style.overflow=id==='home'?'hidden':'auto';
+  if(id!=='home')window.scrollTo({top:0,behavior:'smooth'});
+  document.getElementById('navLn').classList.remove('act');
+  document.getElementById('navTg').classList.remove('act');
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-  showSection('home');
+document.addEventListener('DOMContentLoaded',()=>showSec('home'));
+document.getElementById('navTg').addEventListener('click',()=>{
+  document.getElementById('navTg').classList.toggle('act');
+  document.getElementById('navLn').classList.toggle('act');
 });
 
-document.getElementById('navToggle').addEventListener('click', () => {
-  document.getElementById('navToggle').classList.toggle('active');
-  document.getElementById('navLinks').classList.toggle('active');
-});
+function openLb(i){
+  document.getElementById('lbImg').src=gImgs[i];
+  document.getElementById('lb').classList.add('act');
+  document.body.style.overflow='hidden';
+}
+function closeLb(){
+  document.getElementById('lb').classList.remove('act');
+  document.body.style.overflow='auto';
+}
+document.getElementById('lb').addEventListener('click',e=>{if(e.target.id==='lb')closeLb()});
 
-/* ============================================
-   PARTICLES
-   ============================================ */
-const particlesContainer = document.getElementById('particles');
-for (let i = 0; i < 25; i++) {
-  const p = document.createElement('div');
-  p.className = 'particle';
-  p.style.left = Math.random() * 100 + '%';
-  p.style.animationDelay = Math.random() * 12 + 's';
-  p.style.animationDuration = (8 + Math.random() * 8) + 's';
-  p.style.opacity = (0.3 + Math.random() * 0.5);
-  p.style.width = p.style.height = (2 + Math.random() * 3) + 'px';
-  particlesContainer.appendChild(p);
+function shareSite(){
+  const d={title:"Elohim's Holy Fire Revival Ministry",text:"Carrying the Fire. Proclaiming the Word. Awakening Lives.",url:window.location.href};
+  if(navigator.share)navigator.share(d).catch(()=>{});
+  else window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(d.text+' '+d.url)}`,'_blank');
 }
 
-/* ============================================
-   GALLERY LIGHTBOX
-   ============================================ */
-function openLightbox(index) {
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightbox-img');
-  lightboxImg.src = galleryImages[index];
-  lightbox.classList.add('active');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeLightbox() {
-  const lightbox = document.getElementById('lightbox');
-  lightbox.classList.remove('active');
-  document.body.style.overflow = 'auto';
-}
-
-document.getElementById('lightbox').addEventListener('click', (e) => {
-  if (e.target.id === 'lightbox') {
-    closeLightbox();
-  }
-});
-
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    closeLightbox();
-  }
-});
-
-/* ============================================
-   DAILY WORD
-   ============================================ */
-const verses = [
-  { text: "Be still, and know that I am God.", ref: "Psalm 46:10", reflection: "In the noise of life, God invites you to pause. In stillness, His presence becomes unmistakable. Let your soul rest in Him today." },
-  { text: "I can do all things through Christ which strengtheneth me.", ref: "Philippians 4:13", reflection: "No challenge is too great when Christ is your strength. His power is made perfect in your weakness. Rise today in His might." },
-  { text: "The Lord is my shepherd; I shall not want.", ref: "Psalm 23:1", reflection: "Under the care of the Good Shepherd, you lack nothing. He leads, He provides, He restores. Trust His guidance today." },
-  { text: "Those that wait upon the LORD shall renew their strength.", ref: "Isaiah 40:31", reflection: "Waiting on God is not wasted time — it is where strength is renewed. Soar above your circumstances today by anchoring your hope in Him." },
-  { text: "With God all things are possible.", ref: "Matthew 19:26", reflection: "What seems impossible to man is possible with God. Let faith rise in your heart today — He is able to do exceedingly abundantly above all you ask." }
-];
-
-let currentVerseIndex = -1;
-function showRandomVerse() {
-  let newIndex;
-  do { newIndex = Math.floor(Math.random() * verses.length); } while (newIndex === currentVerseIndex && verses.length > 1);
-  currentVerseIndex = newIndex;
-  const verse = verses[currentVerseIndex];
-  
-  document.getElementById('wordVerse').style.opacity = '0';
-  setTimeout(() => {
-    document.getElementById('wordVerse').textContent = verse.text;
-    document.getElementById('wordRef').textContent = '— ' + verse.ref;
-    document.getElementById('wordReflection').textContent = verse.reflection;
-    document.getElementById('wordVerse').style.opacity = '1';
-  }, 300);
-}
-showRandomVerse();
-document.getElementById('newWordBtn').addEventListener('click', showRandomVerse);
-
-/* ============================================
-   SHARE WEBSITE FUNCTION
-   ============================================ */
-function shareWebsite() {
-  const shareData = {
-    title: 'Elohim\'s Holy Fire Revival Ministry',
-    text: 'Carrying the Fire. Proclaiming the Word. Awakening Lives. Join Prophetess Sylvia at Elohim\'s Holy Fire Revival Ministry.',
-    url: window.location.href
-  };
-  if (navigator.share) {
-    navigator.share(shareData).catch(() => {});
-  } else {
-    const text = encodeURIComponent(`${shareData.text} ${shareData.url}`);
-    window.open(`https://twitter.com/intent/tweet?text=${text}`, '_blank');
-  }
-}
-
-/* ============================================
-   FORMS TO WHATSAPP
-   ============================================ */
-document.getElementById('prayerForm').addEventListener('submit', (e) => {
+document.getElementById('pryFm').addEventListener('submit',e=>{
   e.preventDefault();
-  const name = document.getElementById('prayerName').value.trim();
-  const contact = document.getElementById('prayerContact').value.trim();
-  const request = document.getElementById('prayerRequest').value.trim();
-  const isPrivate = document.getElementById('prayerPrivate').checked;
-
-  const message = `🙏 *PRAYER REQUEST*\n━━━━━━━━━━━━━━━\n*Name:* ${name}\n*Contact:* ${contact}\n*Privacy:* ${isPrivate ? 'Private (Prophetess Sylvia only)' : 'Can be shared for corporate prayer'}\n\n*Request:*\n${request}\n━━━━━━━━━━━━━━━\nSent from Elohim's Holy Fire Revival Ministry website.`;
-  
-  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
+  const n=document.getElementById('pryNm').value.trim(),c=document.getElementById('pryCt').value.trim(),r=document.getElementById('pryRq').value.trim(),p=document.getElementById('pryPr').checked;
+  const m=`🙏 *PRAYER REQUEST*\n━━━━━━━━━━━━━━━\n*Name:* ${n}\n*Contact:* ${c}\n*Privacy:* ${p?'Private':'Can be shared'}\n\n*Request:*\n${r}\n━━━━━━━━━━━━━━━\nSent from Ministry website.`;
+  window.open(`https://wa.me/${WA}?text=${encodeURIComponent(m)}`,'_blank');
   e.target.reset();
 });
 
-document.getElementById('testimonyForm').addEventListener('submit', (e) => {
+document.getElementById('tesFm').addEventListener('submit',e=>{
   e.preventDefault();
-  const name = document.getElementById('testimonyName').value.trim();
-  const testimony = document.getElementById('testimonyText').value.trim();
-
-  const message = `✨ *TESTIMONY*\n━━━━━━━━━━━━━━━\n*Name:* ${name}\n\n*Testimony:*\n${testimony}\n━━━━━━━━━━━━━━━\nSent from Elohim's Holy Fire Revival Ministry website.`;
-  
-  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
-  closeModal('testimonyModalOverlay');
-  e.target.reset();
+  const n=document.getElementById('tesNm').value.trim(),t=document.getElementById('tesTx').value.trim();
+  const m=`✨ *TESTIMONY*\n━━━━━━━━━━━━━━━\n*Name:* ${n}\n\n*Testimony:*\n${t}\n━━━━━━━━━━━━━━━\nSent from Ministry website.`;
+  window.open(`https://wa.me/${WA}?text=${encodeURIComponent(m)}`,'_blank');
+  closeMo('moTes');e.target.reset();
 });
 
-/* ============================================
-   MODALS
-   ============================================ */
-const teachingsData = {
-  1: { category: "Bible Teaching", title: "Walking in the Power of Prayer", body: "<p>Prayer is not a religious ritual — it is the breath of the soul. It is the channel through which Heaven touches earth, and the means by which believers access the power of God.</p><p>When we pray, we are not merely speaking words into the air. We are engaging with the living God, aligning our hearts with His will, and releasing His authority into our situations.</p><p>A life of prayer is a life of power. It is a life where doors open, chains break, and the impossible becomes possible.</p>" },
-  2: { category: "Prayer Reflection", title: "The Fire That Never Goes Out", body: "<p>There is a fire that God kindles in every believer — a holy flame that is not meant to be quenched. It is the fire of the Holy Spirit, the fire of devotion, the fire of purpose.</p><p>But this fire must be tended daily. It is kept alive through prayer, through the Word, through worship, and through obedience. When we neglect these things, the flame grows dim.</p><p>Today, ask the Holy Spirit to rekindle any area of your life where the fire has grown cold.</p>" },
-  3: { category: "Prophetic Encouragement", title: "Seasons of Divine Visitations", body: "<p>There are seasons when Heaven draws near — moments when the presence of God is poured out in a special way. These are divine visitations, and they come to those who are watching, waiting, and hungering.</p><p>The Bible tells us that Jacob cried out at Bethel, 'I will not let You go unless You bless me!' And in that moment, Heaven opened.</p><p>If you sense a stirring in your spirit, do not ignore it. It may be the beginning of a divine visitation in your life.</p>" }
+const tData={
+  1:{cat:"Bible Teaching",tit:"Walking in the Power of Prayer",bod:"<p>Prayer is not a religious ritual — it is the breath of the soul. It is the channel through which Heaven touches earth.</p><p>When we pray, we engage with the living God, aligning our hearts with His will, and releasing His authority into our situations.</p><p>A life of prayer is a life of power. It is a life where doors open, chains break, and the impossible becomes possible.</p>"},
+  2:{cat:"Prayer Reflection",tit:"The Fire That Never Goes Out",bod:"<p>There is a fire that God kindles in every believer — a holy flame that is not meant to be quenched. It is the fire of the Holy Spirit.</p><p>But this fire must be tended daily. It is kept alive through prayer, through the Word, through worship, and through obedience.</p><p>Today, ask the Holy Spirit to rekindle any area of your life where the fire has grown cold.</p>"},
+  3:{cat:"Prophetic Word",tit:"Seasons of Divine Visitations",bod:"<p>There are seasons when Heaven draws near — moments when the presence of God is poured out in a special way.</p><p>The Bible tells us that Jacob cried out at Bethel, 'I will not let You go unless You bless me!' And in that moment, Heaven opened.</p><p>If you sense a stirring in your spirit, do not ignore it. It may be the beginning of a divine visitation in your life.</p>"}
 };
 
-function openTeaching(id) {
-  const data = teachingsData[id];
-  if (data) {
-    document.getElementById('modalCategory').textContent = data.category;
-    document.getElementById('modalTitle').textContent = data.title;
-    document.getElementById('modalBody').innerHTML = data.body;
-    document.getElementById('modalOverlay').classList.add('active');
-  }
+function openTea(id){
+  const d=tData[id];
+  if(d){document.getElementById('mCat').textContent=d.cat;document.getElementById('mTit').textContent=d.tit;document.getElementById('mBod').innerHTML=d.bod;document.getElementById('moTea').classList.add('act')}
 }
+function openTes(){document.getElementById('moTes').classList.add('act')}
+function closeMo(id){document.getElementById(id).classList.remove('act')}
 
-function openTestimonyModal() {
-  document.getElementById('testimonyModalOverlay').classList.add('active');
-}
-
-function closeModal(modalId) {
-  document.getElementById(modalId).classList.remove('active');
-}
-
-document.querySelectorAll('.modal-overlay').forEach(overlay => {
-  overlay.addEventListener('click', (e) => {
-    if (e.target === overlay) {
-      overlay.classList.remove('active');
-    }
-  });
-});
-
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    document.querySelectorAll('.modal-overlay').forEach(m => m.classList.remove('active'));
-    closeLightbox();
-  }
-});
+document.querySelectorAll('.mo').forEach(o=>{o.addEventListener('click',e=>{if(e.target===o)o.classList.remove('act')})});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.querySelectorAll('.mo').forEach(m=>m.classList.remove('act'));closeLb()}});
 </script>
 </body>
 </html>
