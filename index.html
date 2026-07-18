@@ -130,14 +130,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 /* HERO SECTION */
 .hero {
-  min-height: 100dvh; /* Dynamic viewport height for mobile */
+  min-height: 100dvh;
   position: relative; display: flex; align-items: center; justify-content: center;
   overflow: hidden; padding: 120px 0 80px;
-  /* Lighter gradient overlay so Sylvia and kids are clearly visible */
   background: linear-gradient(180deg, rgba(13, 11, 18, 0.2) 0%, rgba(27, 11, 46, 0.4) 100%),
               url('https://i.ibb.co/rKg6RWrT/IMG-9085.jpg') no-repeat center center;
   background-size: cover;
-  background-position: center 15%; /* Optimized to show subjects perfectly */
+  background-position: center 15%;
 }
 .particles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 1; }
 .particle {
@@ -155,7 +154,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   align-items: center; text-align: center; width: 100%; max-width: 900px;
 }
 
-/* Moving text animation for home screen */
 @keyframes gentleFloat {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-12px); }
@@ -220,6 +218,88 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(212, 175, 55, 0.15), 0 1px 0 rgba(255,255,255,0.1) inset;
 }
 
+/* GALLERY SECTION - Mobile Optimized */
+.gallery { background: linear-gradient(180deg, var(--charcoal) 0%, var(--dark) 100%); }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 40px;
+}
+.gallery-item {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transition: var(--transition);
+  border: 2px solid rgba(212, 175, 55, 0.2);
+}
+.gallery-item:hover {
+  transform: translateY(-5px) scale(1.02);
+  border-color: var(--gold);
+  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3);
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+/* LIGHTBOX */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 3, 8, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 3000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.lightbox.active {
+  display: flex;
+  opacity: 1;
+}
+.lightbox img {
+  max-width: 90%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  border: 2px solid var(--gold);
+}
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: rgba(212, 175, 55, 0.2);
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-size: 2rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.lightbox-close:hover {
+  background: var(--gold);
+  color: var(--deep-purple);
+  transform: rotate(90deg);
+}
+
 /* WELCOME */
 .welcome { background: linear-gradient(180deg, var(--dark) 0%, var(--charcoal) 100%); }
 .welcome-inner { display: grid; grid-template-columns: 1fr 1.2fr; gap: 70px; align-items: center; }
@@ -243,7 +323,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .about { background: radial-gradient(ellipse at 80% 20%, rgba(107, 45, 140, 0.15) 0%, transparent 50%), linear-gradient(180deg, var(--charcoal) 0%, var(--dark) 100%); }
 .about-inner { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 80px; align-items: center; }
 
-/* Moving picture from right to left with 3D effect */
 @keyframes panRightToLeft {
   0% { transform: perspective(1000px) rotateY(8deg) translateX(30px); }
   50% { transform: perspective(1000px) rotateY(-8deg) translateX(-30px); }
@@ -528,7 +607,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 @media (max-width: 768px) {
   .section { padding: 80px 0; }
   
-  /* Hero background perfectly fitted for mobile */
   .hero {
     background-position: center center;
     background-size: cover;
@@ -554,8 +632,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   /* Prayer form perfectly visible on mobile */
   .prayer-inner { gap: 40px; }
   .prayer-form-wrap { padding: 30px 20px; width: 100%; }
-  .form-group input, .form-group textarea { font-size: 16px; } /* Prevents iOS auto-zoom */
+  .form-group input, .form-group textarea { font-size: 16px; }
   .btn { width: 100%; justify-content: center; }
+  
+  /* Gallery optimized for mobile */
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
   
   .about-image-frame { animation: none; transform: none; }
   .about-image-frame:hover { transform: scale(1.02); }
@@ -570,9 +654,15 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .modal { padding: 40px 26px; }
 }
 @media (max-width: 480px) {
-  .container { padding: 0 18px; }
-  .hero-title { font-size: 2.2rem; }
-  .section-title { font-size: 1.8rem; }
+  .container { padding: 0 16px; }
+  .hero-title { font-size: 2rem; }
+  .section-title { font-size: 1.6rem; }
+  
+  /* Gallery single column on very small screens */
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
 }
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-track { background: var(--dark); }
@@ -592,6 +682,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       <li><a onclick="showSection('home')">Home</a></li>
       <li><a onclick="showSection('about')">About</a></li>
       <li><a onclick="showSection('ministry')">The Ministry</a></li>
+      <li><a onclick="showSection('gallery')">Gallery</a></li>
       <li><a onclick="showSection('teachings')">Teachings</a></li>
       <li><a onclick="showSection('prayer')">Prayer Request</a></li>
       <li><a onclick="showSection('testimonies')">Testimonies</a></li>
@@ -714,6 +805,55 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     </div>
   </div>
 </section>
+
+<!-- GALLERY SECTION - NEW -->
+<section id="gallery" class="page-section">
+  <div class="section gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Ministry Moments</span>
+        <h2 class="section-title">Photo <span class="accent">Gallery</span></h2>
+        <p class="section-subtitle">Glimpses of the fire, faith, and fellowship at Elohim's Holy Fire Revival Ministry.</p>
+      </div>
+      
+      <div class="gallery-grid">
+        <div class="gallery-item" onclick="openLightbox(0)">
+          <img src="https://i.ibb.co/nvr0h20/IMG-9087.jpg" alt="Ministry Moment 1" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(1)">
+          <img src="https://i.ibb.co/Swy5dT64/1784188041.png" alt="Ministry Logo" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(2)">
+          <img src="https://i.ibb.co/3PbRw6s/IMG-9079.jpg" alt="Ministry Moment 2" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(3)">
+          <img src="https://i.ibb.co/Zz1s5j56/IMG-9081.jpg" alt="Ministry Moment 3" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(4)">
+          <img src="https://i.ibb.co/G44x9S4F/IMG-9082.jpg" alt="Ministry Moment 4" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(5)">
+          <img src="https://i.ibb.co/4wbcyMdh/IMG-9083.jpg" alt="Ministry Moment 5" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(6)">
+          <img src="https://i.ibb.co/RTgNxSW4/IMG-9084.jpg" alt="Prophetess Sylvia" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(7)">
+          <img src="https://i.ibb.co/x8CBsG9r/IMG-9085.jpg" alt="Ministry Moment 6" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(8)">
+          <img src="https://i.ibb.co/20YfKDh3/IMG-9086.jpg" alt="Ministry Moment 7" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX MODAL -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <img id="lightbox-img" src="" alt="Gallery Image">
+</div>
 
 <!-- DAILY WORD SECTION -->
 <section id="word" class="page-section">
@@ -975,7 +1115,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   <div class="container">
     <div class="footer-top">
       <div class="footer-brand">
-        <!-- Logo removed from above the tagline as requested -->
         <p>Carrying the Fire. Proclaiming the Word. Awakening Lives.</p>
         <div class="footer-social">
           <a href="https://www.tiktok.com/@prophetesssylvia" target="_blank" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005.8 20.1a6.34 6.34 0 0010.86-4.43V8.45a8.16 8.16 0 004.77 1.52V6.53a4.85 4.85 0 01-1.84.16z"/></svg></a>
@@ -989,6 +1128,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
           <li><a onclick="showSection('home')">Home</a></li>
           <li><a onclick="showSection('about')">About</a></li>
           <li><a onclick="showSection('ministry')">The Ministry</a></li>
+          <li><a onclick="showSection('gallery')">Gallery</a></li>
           <li><a onclick="showSection('teachings')">Teachings</a></li>
         </ul>
       </div>
@@ -1002,7 +1142,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       </div>
     </div>
     
-    <!-- Centered Footer Bottom -->
     <div class="footer-bottom">
       <p class="copyright">© 2026 Elohim's Holy Fire Revival Ministry</p>
       <p class="powered">Powered by KS1 Empire Global Foundation (KS1EGF)</p>
@@ -1010,7 +1149,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   </div>
 </footer>
 
-<!-- SHARE FLOAT BUTTON (Above WhatsApp) -->
+<!-- SHARE FLOAT BUTTON -->
 <button class="share-float" onclick="shareWebsite()" aria-label="Share Ministry">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
 </button>
@@ -1069,6 +1208,19 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
    ============================================ */
 const WHATSAPP_NUMBER = "233248283692";
 
+// Gallery images array
+const galleryImages = [
+  "https://i.ibb.co/nvr0h20/IMG-9087.jpg",
+  "https://i.ibb.co/Swy5dT64/1784188041.png",
+  "https://i.ibb.co/3PbRw6s/IMG-9079.jpg",
+  "https://i.ibb.co/Zz1s5j56/IMG-9081.jpg",
+  "https://i.ibb.co/G44x9S4F/IMG-9082.jpg",
+  "https://i.ibb.co/4wbcyMdh/IMG-9083.jpg",
+  "https://i.ibb.co/RTgNxSW4/IMG-9084.jpg",
+  "https://i.ibb.co/x8CBsG9r/IMG-9085.jpg",
+  "https://i.ibb.co/20YfKDh3/IMG-9086.jpg"
+];
+
 /* ============================================
    SINGLE PAGE NAVIGATION (SPA)
    ============================================ */
@@ -1115,6 +1267,35 @@ for (let i = 0; i < 25; i++) {
   p.style.width = p.style.height = (2 + Math.random() * 3) + 'px';
   particlesContainer.appendChild(p);
 }
+
+/* ============================================
+   GALLERY LIGHTBOX
+   ============================================ */
+function openLightbox(index) {
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  lightboxImg.src = galleryImages[index];
+  lightbox.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  const lightbox = document.getElementById('lightbox');
+  lightbox.classList.remove('active');
+  document.body.style.overflow = 'auto';
+}
+
+document.getElementById('lightbox').addEventListener('click', (e) => {
+  if (e.target.id === 'lightbox') {
+    closeLightbox();
+  }
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closeLightbox();
+  }
+});
 
 /* ============================================
    DAILY WORD
@@ -1228,6 +1409,7 @@ document.querySelectorAll('.modal-overlay').forEach(overlay => {
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     document.querySelectorAll('.modal-overlay').forEach(m => m.classList.remove('active'));
+    closeLightbox();
   }
 });
 </script>
